@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		33ECD8E920584B3500B6AE8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD8E720584B3500B6AE8E /* LaunchScreen.storyboard */; };
+		33ECD9342058527500B6AE8E /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */; };
+		33ECD9352058527500B6AE8E /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */; };
+		33ECD9362058527500B6AE8E /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33ECD8D520584B3300B6AE8E /* FityIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FityIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ECD8E820584B3500B6AE8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33ECD8EA20584B3500B6AE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
+		33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Black.otf"; sourceTree = "<group>"; };
+		33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Light.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +54,27 @@
 			children = (
 				33ECD8E720584B3500B6AE8E /* LaunchScreen.storyboard */,
 				33ECD8EA20584B3500B6AE8E /* Info.plist */,
+				33ECD9202058527500B6AE8E /* Resources */,
 			);
 			path = FityIt;
+			sourceTree = "<group>";
+		};
+		33ECD9202058527500B6AE8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33ECD9292058527500B6AE8E /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		33ECD9292058527500B6AE8E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */,
+				33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */,
+				33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +135,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33ECD9362058527500B6AE8E /* VAGRoundedStd-Light.otf in Resources */,
+				33ECD9342058527500B6AE8E /* VAGRoundedStd-Bold.otf in Resources */,
+				33ECD9352058527500B6AE8E /* VAGRoundedStd-Black.otf in Resources */,
 				33ECD8E920584B3500B6AE8E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
