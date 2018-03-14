@@ -11,9 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var instance: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
+    static var gameViewController: GameViewController { return instance.gameViewController }
     
     var window: UIWindow?
-    var gameViewController: GameViewController?
+    private lazy var gameViewController = GameViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -23,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             BUILD_MODE = .release
         #endif
         
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.backgroundColor = UIColor.white
         window!.makeKeyAndVisible()
@@ -32,8 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        PersistenceHandler.resetPlayedSectionPlayedMatches()
-        ((self.gameViewController?.view as? SKView)?.scene as? GameScene)?.updateTimer.lap()
+        AppPersistence.matchesPlayedSinceLaunch = 0
+        if let gameScene = gameViewController.gameView.scene as? GameScene {
+            gameScene.updateTimer.lap()
+        }
     }
 }
 

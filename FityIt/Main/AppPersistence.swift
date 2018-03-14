@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class AppPersistence {
+enum AppPersistence {
     static func newPlayedMatch() {
         matchesPlayedSinceLaunch += 1
         print("STATISTICS: \(matchesPlayedSinceLaunch) matches since launch")
@@ -16,19 +16,19 @@ class AppPersistence {
     }
     
     static func saveNewScore(_ score: Score) {
-        if score.points > getHighScorePoints() {
+        if score.points > highScorePoints {
             highScorePoints = score.points
             reportNewAchievement(points: score.points)
         }
         
-        GCHelper.sharedInstance.reportLeaderboardIdentifier(MAIN_FITYIT_LEADERBOARD_ID, score: score.points)
+        GCHelper.sharedInstance.reportLeaderboardIdentifier(AppDefines.Constants.mainLeaderboardID, score: score.points)
     }
     
     static func resetUserDefaults() {
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
     
-    private static var matchesPlayedSinceLaunch: Int = 0 {
+    static var matchesPlayedSinceLaunch: Int = 0 {
         didSet {
             if matchesPlayedSinceLaunch != 0 {
                 matchesPlayedSinceTheBeginningOfTime += 1
