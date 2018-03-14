@@ -43,6 +43,7 @@
 		33ECD9AB2059C51F00B6AE8E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AA2059C51E00B6AE8E /* GameScene.swift */; };
 		33ECD9AD2059C5E500B6AE8E /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AC2059C5E500B6AE8E /* Score.swift */; };
 		33ECD9B02059C90A00B6AE8E /* UpdateTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */; };
+		33ECD9B22059CB4800B6AE8E /* SKAction+SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9B12059CB4800B6AE8E /* SKAction+SoundEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		33ECD9AA2059C51E00B6AE8E /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		33ECD9AC2059C5E500B6AE8E /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTimer.swift; sourceTree = "<group>"; };
+		33ECD9B12059CB4800B6AE8E /* SKAction+SoundEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+SoundEffects.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */,
 				33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */,
 				33ECD96D205869C700B6AE8E /* Numbers+Random.swift */,
+				33ECD9B12059CB4800B6AE8E /* SKAction+SoundEffects.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
 				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,
 				33ECD9AD2059C5E500B6AE8E /* Score.swift in Sources */,
+				33ECD9B22059CB4800B6AE8E /* SKAction+SoundEffects.swift in Sources */,
 				33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
