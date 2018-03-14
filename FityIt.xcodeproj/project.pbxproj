@@ -36,6 +36,7 @@
 		33ECD99A2059A33A00B6AE8E /* AppCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9992059A33A00B6AE8E /* AppCache.swift */; };
 		33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */; };
 		33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */; };
+		33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99F2059BB7100B6AE8E /* AppDefines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		33ECD9992059A33A00B6AE8E /* AppCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCache.swift; sourceTree = "<group>"; };
 		33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTexture+Extensions.swift"; sourceTree = "<group>"; };
 		33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		33ECD99F2059BB7100B6AE8E /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				33ECD96820585CF200B6AE8E /* AppDelegate.swift */,
 				33ECD97120597E0000B6AE8E /* AppColors.swift */,
 				33ECD9992059A33A00B6AE8E /* AppCache.swift */,
+				33ECD99F2059BB7100B6AE8E /* AppDefines.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
 				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
 				33ECD996205997DC00B6AE8E /* Delay.swift in Sources */,
+				33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */,
 				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
 				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,
 				33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */,

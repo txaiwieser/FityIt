@@ -16,11 +16,11 @@ class SplashScreenViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        GameSingleton.instance.initializeInitialScreenBackgroundTexture(InitialScene.calculateSceneSize(self.view.frame.size))
+        AppCache.instance.initializeInitialScreenBackgroundTexture(InitialScene.calculateSceneSize(self.view.frame.size))
         
         delay(0.2) {
-            GameSingleton.instance.initializeGameTextures(GameScene.calculateSceneSize(self.view.frame.size))
-            GameSingleton.instance.resetSounds()
+            AppCache.instance.initializeGameTextures(GameScene.calculateSceneSize(self.view.frame.size))
+            AppCache.instance.resetSounds(initializeAfter: true)
         }
         
         delay(0.4) {

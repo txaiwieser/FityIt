@@ -36,7 +36,7 @@ class Shape: SKSpriteNode {
         shapePath = type.path()
         super.init(texture: nil, color: .clear, size: Constant.defaultSize)
         
-        run(SKAction.setTexture(GameSingleton.instance.main.textureNamed(type.textureName()), resize: true))
+        run(.setTexture(AppCache.instance.mainAtlas.textureNamed(type.textureName()), resize: true))
 
         if BUILD_MODE == .debug {
             let mark = SKSpriteNode(color: .white, size: CGSize(width: 4, height: 4))

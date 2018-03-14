@@ -18,8 +18,8 @@ class AppCache {
     
     // MARK: SKTextureAtlas
     
-    private let mainAtlas = SKTextureAtlas(named: "main")
-    private let interfaceAtlas = SKTextureAtlas(named: "interface")
+    let mainAtlas = SKTextureAtlas(named: "main")
+    let interfaceAtlas = SKTextureAtlas(named: "interface")
     
     private(set) var initialScreenBackgroundTexture: SKTexture!
     
