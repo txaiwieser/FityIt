@@ -37,6 +37,8 @@
 		33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */; };
 		33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */; };
 		33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99F2059BB7100B6AE8E /* AppDefines.swift */; };
+		33ECD9A32059BF5500B6AE8E /* InitialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A22059BF5400B6AE8E /* InitialScene.swift */; };
+		33ECD9A52059BFCD00B6AE8E /* AppPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A42059BFCD00B6AE8E /* AppPersistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTexture+Extensions.swift"; sourceTree = "<group>"; };
 		33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		33ECD99F2059BB7100B6AE8E /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
+		33ECD9A22059BF5400B6AE8E /* InitialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScene.swift; sourceTree = "<group>"; };
+		33ECD9A42059BFCD00B6AE8E /* AppPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPersistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				33ECD96F205869CB00B6AE8E /* Utilities */,
 				33ECD96620585CD100B6AE8E /* Main */,
 				33ECD9512058546000B6AE8E /* Game Objects */,
+				33ECD9A12059BF3F00B6AE8E /* Scenes */,
 				33ECD8EA20584B3500B6AE8E /* Info.plist */,
 				33ECD9202058527500B6AE8E /* Resources */,
 			);
@@ -179,6 +184,7 @@
 				33ECD97120597E0000B6AE8E /* AppColors.swift */,
 				33ECD9992059A33A00B6AE8E /* AppCache.swift */,
 				33ECD99F2059BB7100B6AE8E /* AppDefines.swift */,
+				33ECD9A42059BFCD00B6AE8E /* AppPersistence.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -211,6 +217,14 @@
 				33ECD9912059974900B6AE8E /* SplashScreenViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33ECD9A12059BF3F00B6AE8E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				33ECD9A22059BF5400B6AE8E /* InitialScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,12 +312,14 @@
 				33ECD97420597F1E00B6AE8E /* ShapeType+Properties.swift in Sources */,
 				33ECD96A20585CF200B6AE8E /* AppDelegate.swift in Sources */,
 				33ECD99A2059A33A00B6AE8E /* AppCache.swift in Sources */,
+				33ECD9A32059BF5500B6AE8E /* InitialScene.swift in Sources */,
 				33ECD96E205869C700B6AE8E /* Numbers+Random.swift in Sources */,
 				33ECD96C20585E6B00B6AE8E /* PhysicsCategory.swift in Sources */,
 				33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */,
 				33ECD99820599B9400B6AE8E /* GameViewController.swift in Sources */,
 				33ECD97220597E0100B6AE8E /* AppColors.swift in Sources */,
 				33ECD9942059974900B6AE8E /* SplashScreenViewController.swift in Sources */,
+				33ECD9A52059BFCD00B6AE8E /* AppPersistence.swift in Sources */,
 				33ECD96920585CF200B6AE8E /* AppBuildMode.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
 				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
