@@ -1,0 +1,48 @@
+//
+//  Localizable.strings
+//  FityIt
+//
+//  Created by Txai Wieser on 14/03/18.
+//  Copyright © 2018 Txai Wieser. All rights reserved.
+//
+
+"DOWNLOAD_BANNER"          = "download_banner_pt";
+"SHARE_MESSAGE_COMPLETE"   = "Acabei de fazer %d %@ no #FityIt. Meu recorde é %d, consegue mais?";
+"SHARE_MESSAGE_COMPLETE_POINTS" = "pontos";
+"SHARE_MESSAGE_COMPLETE_POINT"  = "ponto";
+"SHARE_MESSAGE_TOP"        = "Meu recorde é %d! Consegue mais? #FityIt";
+
+"REMOVE_ADS"               = "Remover Anúncios";
+
+"TUTORIAL_TAP" = "Toque";
+"MSG_READY" = "Pronto?";
+
+
+"REMOVE_ADS_ALERT_TITLE"   = "Você deseja remover os anúncios?";
+
+"REMOVE_ADS_ALERT_MESSAGE" = "Com a remoção dos anúncios você aproveitará o jogo livre de distrações.";
+
+"REMOVE_ADS_ALERT_BUY"     = "Comprar";
+
+"REMOVE_ADS_ALERT_RESTORE" = "Restaurar compra";
+
+"REMOVE_ADS_ALERT_CANCEL"  = "Cancelar";
+
+
+
+
+"RATE_ALERT_TITLE"         = "Você deseja ir avaliar o jogo? =)";
+
+"RATE_ALERT_MESSAGE"       = "Isso é muito importante pra gente! Não vai demorar mais de um minuto. Obrigado pelo seu apoio!";
+
+"RATE_ALERT_YES"           = "Avaliar";
+
+"RATE_ALERT_CANCEL"        = "Cancelar";
+
+
+
+"PANEL_HIGH_SCORE"         = "RECORDE";
+
+"PANEL_SCORE"              = "PONTUAÇÃO";
+
+
