@@ -28,6 +28,7 @@
 		33ECD9832059834800B6AE8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD9852059834800B6AE8E /* Localizable.strings */; };
 		33ECD989205983E600B6AE8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */; };
 		33ECD98B205986C300B6AE8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD98A205986C300B6AE8E /* Images.xcassets */; };
+		33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		33ECD9872059836300B6AE8E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33ECD98A205986C300B6AE8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Polygons.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		33ECD970205869DA00B6AE8E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */,
 				33ECD96D205869C700B6AE8E /* Numbers+Random.swift */,
 			);
 			path = Extensions;
@@ -267,6 +270,7 @@
 				33ECD96920585CF200B6AE8E /* AppBuildMode.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
 				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
+				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
 				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
