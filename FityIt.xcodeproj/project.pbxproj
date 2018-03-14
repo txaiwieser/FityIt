@@ -17,15 +17,15 @@
 		33ECD94E2058542000B6AE8E /* button_down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD9482058542000B6AE8E /* button_down.wav */; };
 		33ECD94F2058542000B6AE8E /* button_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD9492058542000B6AE8E /* button_up.wav */; };
 		33ECD9502058542000B6AE8E /* spinner_turn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD94A2058542000B6AE8E /* spinner_turn.wav */; };
-		33ECD95C2058546100B6AE8E /* Pentagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9532058546000B6AE8E /* Pentagon.swift */; };
-		33ECD95D2058546100B6AE8E /* Circle+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9542058546000B6AE8E /* Circle+Paths.swift */; };
-		33ECD95E2058546100B6AE8E /* Triangle+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9552058546000B6AE8E /* Triangle+Paths.swift */; };
-		33ECD95F2058546100B6AE8E /* Square+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9562058546000B6AE8E /* Square+Paths.swift */; };
-		33ECD9602058546100B6AE8E /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9572058546000B6AE8E /* Square.swift */; };
-		33ECD9612058546100B6AE8E /* Pentagon+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9582058546000B6AE8E /* Pentagon+Paths.swift */; };
+		33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9532058546000B6AE8E /* ShapeType.swift */; };
 		33ECD9622058546100B6AE8E /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9592058546000B6AE8E /* Shape.swift */; };
-		33ECD9632058546100B6AE8E /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD95A2058546000B6AE8E /* Circle.swift */; };
-		33ECD9642058546100B6AE8E /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD95B2058546000B6AE8E /* Triangle.swift */; };
+		33ECD96920585CF200B6AE8E /* AppBuildMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD96720585CF200B6AE8E /* AppBuildMode.swift */; };
+		33ECD96A20585CF200B6AE8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD96820585CF200B6AE8E /* AppDelegate.swift */; };
+		33ECD96C20585E6B00B6AE8E /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD96B20585E6B00B6AE8E /* PhysicsCategory.swift */; };
+		33ECD96E205869C700B6AE8E /* Numbers+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD96D205869C700B6AE8E /* Numbers+Random.swift */; };
+		33ECD97220597E0100B6AE8E /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD97120597E0000B6AE8E /* AppColors.swift */; };
+		33ECD97420597F1E00B6AE8E /* ShapeType+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD97320597F1E00B6AE8E /* ShapeType+Properties.swift */; };
+		33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD97520597FAB00B6AE8E /* ShapeType+Paths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,15 +41,15 @@
 		33ECD9482058542000B6AE8E /* button_down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_down.wav; sourceTree = "<group>"; };
 		33ECD9492058542000B6AE8E /* button_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_up.wav; sourceTree = "<group>"; };
 		33ECD94A2058542000B6AE8E /* spinner_turn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spinner_turn.wav; sourceTree = "<group>"; };
-		33ECD9532058546000B6AE8E /* Pentagon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pentagon.swift; sourceTree = "<group>"; };
-		33ECD9542058546000B6AE8E /* Circle+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Circle+Paths.swift"; sourceTree = "<group>"; };
-		33ECD9552058546000B6AE8E /* Triangle+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Triangle+Paths.swift"; sourceTree = "<group>"; };
-		33ECD9562058546000B6AE8E /* Square+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Square+Paths.swift"; sourceTree = "<group>"; };
-		33ECD9572058546000B6AE8E /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
-		33ECD9582058546000B6AE8E /* Pentagon+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pentagon+Paths.swift"; sourceTree = "<group>"; };
+		33ECD9532058546000B6AE8E /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
 		33ECD9592058546000B6AE8E /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
-		33ECD95A2058546000B6AE8E /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
-		33ECD95B2058546000B6AE8E /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		33ECD96720585CF200B6AE8E /* AppBuildMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBuildMode.swift; sourceTree = "<group>"; };
+		33ECD96820585CF200B6AE8E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33ECD96B20585E6B00B6AE8E /* PhysicsCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
+		33ECD96D205869C700B6AE8E /* Numbers+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numbers+Random.swift"; sourceTree = "<group>"; };
+		33ECD97120597E0000B6AE8E /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		33ECD97320597F1E00B6AE8E /* ShapeType+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeType+Properties.swift"; sourceTree = "<group>"; };
+		33ECD97520597FAB00B6AE8E /* ShapeType+Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeType+Paths.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +82,8 @@
 		33ECD8D720584B3300B6AE8E /* FityIt */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD96F205869CB00B6AE8E /* Utilities */,
+				33ECD96620585CD100B6AE8E /* Main */,
 				33ECD9512058546000B6AE8E /* Game Objects */,
 				33ECD8E720584B3500B6AE8E /* LaunchScreen.storyboard */,
 				33ECD8EA20584B3500B6AE8E /* Info.plist */,
@@ -125,6 +127,7 @@
 		33ECD9512058546000B6AE8E /* Game Objects */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD96B20585E6B00B6AE8E /* PhysicsCategory.swift */,
 				33ECD9522058546000B6AE8E /* Shapes */,
 			);
 			path = "Game Objects";
@@ -134,24 +137,37 @@
 			isa = PBXGroup;
 			children = (
 				33ECD9592058546000B6AE8E /* Shape.swift */,
-				33ECD965205854B000B6AE8E /* Paths */,
-				33ECD9532058546000B6AE8E /* Pentagon.swift */,
-				33ECD9572058546000B6AE8E /* Square.swift */,
-				33ECD95A2058546000B6AE8E /* Circle.swift */,
-				33ECD95B2058546000B6AE8E /* Triangle.swift */,
+				33ECD9532058546000B6AE8E /* ShapeType.swift */,
+				33ECD97320597F1E00B6AE8E /* ShapeType+Properties.swift */,
+				33ECD97520597FAB00B6AE8E /* ShapeType+Paths.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
 		};
-		33ECD965205854B000B6AE8E /* Paths */ = {
+		33ECD96620585CD100B6AE8E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				33ECD9542058546000B6AE8E /* Circle+Paths.swift */,
-				33ECD9552058546000B6AE8E /* Triangle+Paths.swift */,
-				33ECD9562058546000B6AE8E /* Square+Paths.swift */,
-				33ECD9582058546000B6AE8E /* Pentagon+Paths.swift */,
+				33ECD96720585CF200B6AE8E /* AppBuildMode.swift */,
+				33ECD96820585CF200B6AE8E /* AppDelegate.swift */,
+				33ECD97120597E0000B6AE8E /* AppColors.swift */,
 			);
-			path = Paths;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		33ECD96F205869CB00B6AE8E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				33ECD970205869DA00B6AE8E /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		33ECD970205869DA00B6AE8E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33ECD96D205869C700B6AE8E /* Numbers+Random.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,15 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33ECD9602058546100B6AE8E /* Square.swift in Sources */,
-				33ECD9632058546100B6AE8E /* Circle.swift in Sources */,
-				33ECD95E2058546100B6AE8E /* Triangle+Paths.swift in Sources */,
-				33ECD9642058546100B6AE8E /* Triangle.swift in Sources */,
-				33ECD9612058546100B6AE8E /* Pentagon+Paths.swift in Sources */,
+				33ECD97420597F1E00B6AE8E /* ShapeType+Properties.swift in Sources */,
+				33ECD96A20585CF200B6AE8E /* AppDelegate.swift in Sources */,
+				33ECD96E205869C700B6AE8E /* Numbers+Random.swift in Sources */,
+				33ECD96C20585E6B00B6AE8E /* PhysicsCategory.swift in Sources */,
+				33ECD97220597E0100B6AE8E /* AppColors.swift in Sources */,
+				33ECD96920585CF200B6AE8E /* AppBuildMode.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
-				33ECD95F2058546100B6AE8E /* Square+Paths.swift in Sources */,
-				33ECD95D2058546100B6AE8E /* Circle+Paths.swift in Sources */,
-				33ECD95C2058546100B6AE8E /* Pentagon.swift in Sources */,
+				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
+				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
