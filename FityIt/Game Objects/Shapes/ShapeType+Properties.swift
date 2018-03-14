@@ -38,13 +38,13 @@ extension ShapeType {
     func path() -> UIBezierPath {
         switch self {
         case .circle:
-            return circlePath()
+            return Circle.path()
         case .square:
-            return squarePath()
+            return Square.path()
         case .triangle:
-            return trianglePath()
+            return Triangle.path()
         case .pentagon:
-            return pentagonPath()
+            return Pentagon.path()
         }
     }
     
