@@ -27,6 +27,7 @@
 		33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD97520597FAB00B6AE8E /* ShapeType+Paths.swift */; };
 		33ECD9832059834800B6AE8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD9852059834800B6AE8E /* Localizable.strings */; };
 		33ECD989205983E600B6AE8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */; };
+		33ECD98B205986C300B6AE8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD98A205986C300B6AE8E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		33ECD9862059835B00B6AE8E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		33ECD9872059836300B6AE8E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33ECD98A205986C300B6AE8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		33ECD9202058527500B6AE8E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD98A205986C300B6AE8E /* Images.xcassets */,
 				33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */,
 				33ECD9852059834800B6AE8E /* Localizable.strings */,
 				33ECD9442058541F00B6AE8E /* Sounds */,
@@ -243,6 +246,7 @@
 				33ECD94E2058542000B6AE8E /* button_down.wav in Resources */,
 				33ECD9502058542000B6AE8E /* spinner_turn.wav in Resources */,
 				33ECD94F2058542000B6AE8E /* button_up.wav in Resources */,
+				33ECD98B205986C300B6AE8E /* Images.xcassets in Resources */,
 				33ECD989205983E600B6AE8E /* LaunchScreen.storyboard in Resources */,
 				33ECD94D2058542000B6AE8E /* shape_special.wav in Resources */,
 			);
@@ -406,6 +410,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 99MCMQ6KGP;
 				INFOPLIST_FILE = FityIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,6 +431,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FityIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
