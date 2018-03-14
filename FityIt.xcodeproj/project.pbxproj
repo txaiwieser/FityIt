@@ -40,6 +40,9 @@
 		33ECD9A32059BF5500B6AE8E /* InitialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A22059BF5400B6AE8E /* InitialScene.swift */; };
 		33ECD9A52059BFCD00B6AE8E /* AppPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A42059BFCD00B6AE8E /* AppPersistence.swift */; };
 		33ECD9A92059C42500B6AE8E /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A82059C42500B6AE8E /* GCHelper.swift */; };
+		33ECD9AB2059C51F00B6AE8E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AA2059C51E00B6AE8E /* GameScene.swift */; };
+		33ECD9AD2059C5E500B6AE8E /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AC2059C5E500B6AE8E /* Score.swift */; };
+		33ECD9B02059C90A00B6AE8E /* UpdateTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		33ECD9A22059BF5400B6AE8E /* InitialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScene.swift; sourceTree = "<group>"; };
 		33ECD9A42059BFCD00B6AE8E /* AppPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPersistence.swift; sourceTree = "<group>"; };
 		33ECD9A82059C42500B6AE8E /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
+		33ECD9AA2059C51E00B6AE8E /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		33ECD9AC2059C5E500B6AE8E /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				33ECD96B20585E6B00B6AE8E /* PhysicsCategory.swift */,
+				33ECD9AC2059C5E500B6AE8E /* Score.swift */,
 				33ECD9522058546000B6AE8E /* Shapes */,
 			);
 			path = "Game Objects";
@@ -226,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				33ECD9A22059BF5400B6AE8E /* InitialScene.swift */,
+				33ECD9AA2059C51E00B6AE8E /* GameScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 		33ECD9A62059C3A800B6AE8E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD9AE2059C90900B6AE8E /* UpdateTimer */,
 				33ECD9A72059C3DC00B6AE8E /* GCHelper */,
 			);
 			path = "Supporting Files";
@@ -244,6 +253,14 @@
 				33ECD9A82059C42500B6AE8E /* GCHelper.swift */,
 			);
 			path = GCHelper;
+			sourceTree = "<group>";
+		};
+		33ECD9AE2059C90900B6AE8E /* UpdateTimer */ = {
+			isa = PBXGroup;
+			children = (
+				33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */,
+			);
+			path = UpdateTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,13 +357,16 @@
 				33ECD9942059974900B6AE8E /* SplashScreenViewController.swift in Sources */,
 				33ECD9A52059BFCD00B6AE8E /* AppPersistence.swift in Sources */,
 				33ECD96920585CF200B6AE8E /* AppBuildMode.swift in Sources */,
+				33ECD9AB2059C51F00B6AE8E /* GameScene.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
 				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
+				33ECD9B02059C90A00B6AE8E /* UpdateTimer.swift in Sources */,
 				33ECD996205997DC00B6AE8E /* Delay.swift in Sources */,
 				33ECD9A92059C42500B6AE8E /* GCHelper.swift in Sources */,
 				33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */,
 				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
 				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,
+				33ECD9AD2059C5E500B6AE8E /* Score.swift in Sources */,
 				33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
