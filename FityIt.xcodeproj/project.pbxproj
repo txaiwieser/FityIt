@@ -29,6 +29,13 @@
 		33ECD989205983E600B6AE8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */; };
 		33ECD98B205986C300B6AE8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD98A205986C300B6AE8E /* Images.xcassets */; };
 		33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */; };
+		33ECD9932059974900B6AE8E /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD9912059974900B6AE8E /* SplashScreenViewController.xib */; };
+		33ECD9942059974900B6AE8E /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9922059974900B6AE8E /* SplashScreenViewController.swift */; };
+		33ECD996205997DC00B6AE8E /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD995205997DC00B6AE8E /* Delay.swift */; };
+		33ECD99820599B9400B6AE8E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99720599B9400B6AE8E /* GameViewController.swift */; };
+		33ECD99A2059A33A00B6AE8E /* AppCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9992059A33A00B6AE8E /* AppCache.swift */; };
+		33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */; };
+		33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33ECD98A205986C300B6AE8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Polygons.swift"; sourceTree = "<group>"; };
+		33ECD9912059974900B6AE8E /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		33ECD9922059974900B6AE8E /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		33ECD995205997DC00B6AE8E /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		33ECD99720599B9400B6AE8E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		33ECD9992059A33A00B6AE8E /* AppCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCache.swift; sourceTree = "<group>"; };
+		33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTexture+Extensions.swift"; sourceTree = "<group>"; };
+		33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +104,7 @@
 		33ECD8D720584B3300B6AE8E /* FityIt */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD9902059972F00B6AE8E /* Controllers */,
 				33ECD96F205869CB00B6AE8E /* Utilities */,
 				33ECD96620585CD100B6AE8E /* Main */,
 				33ECD9512058546000B6AE8E /* Game Objects */,
@@ -160,6 +175,7 @@
 				33ECD96720585CF200B6AE8E /* AppBuildMode.swift */,
 				33ECD96820585CF200B6AE8E /* AppDelegate.swift */,
 				33ECD97120597E0000B6AE8E /* AppColors.swift */,
+				33ECD9992059A33A00B6AE8E /* AppCache.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -167,6 +183,7 @@
 		33ECD96F205869CB00B6AE8E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD995205997DC00B6AE8E /* Delay.swift */,
 				33ECD970205869DA00B6AE8E /* Extensions */,
 			);
 			path = Utilities;
@@ -176,9 +193,21 @@
 			isa = PBXGroup;
 			children = (
 				33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */,
+				33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */,
+				33ECD99D2059B10500B6AE8E /* UIImage+Extensions.swift */,
 				33ECD96D205869C700B6AE8E /* Numbers+Random.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		33ECD9902059972F00B6AE8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33ECD99720599B9400B6AE8E /* GameViewController.swift */,
+				33ECD9922059974900B6AE8E /* SplashScreenViewController.swift */,
+				33ECD9912059974900B6AE8E /* SplashScreenViewController.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +281,7 @@
 				33ECD98B205986C300B6AE8E /* Images.xcassets in Resources */,
 				33ECD989205983E600B6AE8E /* LaunchScreen.storyboard in Resources */,
 				33ECD94D2058542000B6AE8E /* shape_special.wav in Resources */,
+				33ECD9932059974900B6AE8E /* SplashScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,14 +294,20 @@
 			files = (
 				33ECD97420597F1E00B6AE8E /* ShapeType+Properties.swift in Sources */,
 				33ECD96A20585CF200B6AE8E /* AppDelegate.swift in Sources */,
+				33ECD99A2059A33A00B6AE8E /* AppCache.swift in Sources */,
 				33ECD96E205869C700B6AE8E /* Numbers+Random.swift in Sources */,
 				33ECD96C20585E6B00B6AE8E /* PhysicsCategory.swift in Sources */,
+				33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */,
+				33ECD99820599B9400B6AE8E /* GameViewController.swift in Sources */,
 				33ECD97220597E0100B6AE8E /* AppColors.swift in Sources */,
+				33ECD9942059974900B6AE8E /* SplashScreenViewController.swift in Sources */,
 				33ECD96920585CF200B6AE8E /* AppBuildMode.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
 				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
+				33ECD996205997DC00B6AE8E /* Delay.swift in Sources */,
 				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
 				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,
+				33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +450,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 99MCMQ6KGP;
 				INFOPLIST_FILE = FityIt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,7 +471,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FityIt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
