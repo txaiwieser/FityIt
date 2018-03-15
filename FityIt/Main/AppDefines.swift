@@ -12,6 +12,8 @@ import SpriteKit
 enum AppDefines {
     enum Constants {
         static let mainLeaderboardID = "FityItLeaderboard"
+        static let appStoreID = "id1114394063"
+        static let appStoreLink = ""
         //    let DEVICE_NOT_IPAD_NEITHER_64_BIT =  UIDevice.current.userInterfaceIdiom == .phone && (MemoryLayout<Int>.size == MemoryLayout<Int64>.size ? false : true)
     }
     

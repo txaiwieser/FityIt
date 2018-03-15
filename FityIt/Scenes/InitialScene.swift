@@ -25,12 +25,12 @@ class InitialScene: SKScene {
         super.didMove(to: view)
         animationApear?()
     }
-
+    
     override func willMove(from view: SKView) {
         super.willMove(from: view)
         animationDisapear?()
     }
-
+    
     init(score: Score?) {
         self.score = score
         let newSize = InitialScene.calculateSceneSize()
@@ -49,14 +49,14 @@ class InitialScene: SKScene {
         gradientNode1.alpha = 1
         gradientNode1.zPosition = 1
         addChild(gradientNode1)
-
+        
         let gradientNode2 = SKSpriteNode(color: .darkerBlack, size: CGSize(width: newSize.width, height: newSize.height/2))
         gradientNode2.position = CGPoint(x: newSize.width/2, y: newSize.height/2)
         gradientNode2.position.y -= newSize.height/4
         gradientNode2.alpha = 1
         gradientNode2.zPosition = 390
         addChild(gradientNode2)
-
+        
         let isiPad = UIDevice.current.userInterfaceIdiom == .pad
         let iPadSize = CGSize(width: 326, height: 54)
         let iPhoneSize = CGSize(width: 216, height: 30)
@@ -67,24 +67,24 @@ class InitialScene: SKScene {
         circlesStack.add(node: playButton)
         circlesStack.add(node: shareButton)
         circlesStack.reloadStack()
-
+        
         let squaresStack = TWStackNode(size: deviceSize, fillMode: .horizontal)
         squaresStack.add(node: leaderboardButton)
         squaresStack.add(node: soundButton)
         squaresStack.add(node: rateButton)
         squaresStack.reloadStack()
-
+        
         let bottomStack = TWStackNode(lenght: deviceSize.width, fillMode: .vertical)
         bottomStack.add(node: circlesStack)
         bottomStack.add(node: margin)
         bottomStack.add(node: squaresStack)
         bottomStack.add(node: margin.copy() as! SKNode)
         bottomStack.reloadStack()
-
+        
         bottomStack.position = CGPoint(x: newSize.width/2, y: bottomStack.size.height/2)
         bottomStack.zPosition = 1000
         addChild(bottomStack)
-
+        
         
         let multiplier: CGFloat = isiPad ? 30 : 20
         scoreContainer.alpha = 0
@@ -98,25 +98,25 @@ class InitialScene: SKScene {
         topStack.add(node: scoreContainer)
         topStack.reloadStack()
         addChild(topStack)
-
+        
         tutorialButton.position = CGPoint(x: newSize.width - tutorialButton.size.width/2, y: newSize.height - tutorialButton.size.height/2)
         tutorialButton.zPosition = 500
         tutorialButton.alpha = 0
         addChild(tutorialButton)
-
+        
         let track = SKSpriteNode(color: .white, size: CGSize(width: newSize.width + 10, height: multiplier))
         track.position = CGPoint(x: newSize.width/2, y: newSize.height/2)
         track.position.y -= multiplier/2
         track.zPosition = 400
         addChild(track)
-
+        
         animationApear = { [weak self] in
             if let strongSelf = self {
                 let start1 = bottomStack.position - CGPoint(x: 0 , y: 2 * strongSelf.convert(.zero, from: bottomStack).y)
                 let ef1 = SKTMoveEffect(node: bottomStack, duration: 0.8, startPosition: start1, endPosition: bottomStack.position)
                 ef1.timingFunction = SKTTimingFunctionBounceEaseOut
                 bottomStack.run(.actionWithEffect(ef1))
-
+                
                 let logo = strongSelf.bannerLogo
                 let start2 = logo.position + CGPoint(x: 0, y: 2 * (strongSelf.size.height - strongSelf.convert(.zero, from: logo).y))
                 let ef2 = SKTMoveEffect(node: logo, duration: 0.8, startPosition: start2, endPosition: logo.position)
@@ -127,34 +127,34 @@ class InitialScene: SKScene {
                 strongSelf.tutorialButton.run(.appearAnimated(strongSelf.tutorialButton, time: 0.8, scale: 1))
             }
         }
-
+        
         animationDisapear = { [weak self] in
             if let strongSelf = self {
                 let end1 = bottomStack.position - CGPoint(x: 0 , y: 2 * strongSelf.convert(.zero, from: bottomStack).y)
                 let ef1 = SKTMoveEffect(node: bottomStack, duration: 0.2, startPosition: bottomStack.position, endPosition: end1)
                 ef1.timingFunction = SKTTimingFunctionExponentialEaseIn
                 bottomStack.run(.actionWithEffect(ef1))
-
+                
                 let logo = strongSelf.bannerLogo
                 let end2 = logo.position + CGPoint(x: 0, y: 2 * (strongSelf.size.height - strongSelf.convert(.zero, from: logo).y))
                 let ef2 = SKTMoveEffect(node: logo, duration: 0.2, startPosition: logo.position, endPosition: end2)
                 ef2.timingFunction = SKTTimingFunctionExponentialEaseIn
                 logo.run(.actionWithEffect(ef2))
-
+                
                 strongSelf.scoreContainer.run(.disappearAnimated(strongSelf.scoreContainer, time: 0.3))
                 strongSelf.tutorialButton.run(.disappearAnimated(strongSelf.tutorialButton, time: 0.16))
             }
         }
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     static func calculateSceneSize(_ size: CGSize? = nil) -> CGSize {
         let size = size ?? AppDelegate.gameViewController.gameView.frame.size
         let isiPad = UIDevice.current.userInterfaceIdiom == .pad
-
+        
         let defaultHeight: CGFloat = (isiPad ? 1024 : 640)
         let const = defaultHeight / size.height
         return CGSize(width: const * size.width, height: defaultHeight)
@@ -174,21 +174,21 @@ class InitialScene: SKScene {
     }
     
     // MARK: Buttons and banners
-
+    
     private lazy var bannerLogo: SKSpriteNode = SKSpriteNode(texture: AppCache.instance.interfaceAtlas.textureNamed("fityit_logo"))
     private lazy var scoreContainer: ScoreContainer = ScoreContainer(texture: AppCache.instance.interfaceAtlas.textureNamed("score_container"))
     
     private lazy var playButton: TWButton = {
         let bt = TWButton(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_play_n"),
                           highlightedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_play_h"))
-
+        
         bt.addClosure(.touchUpInside, target: self, closure: { (currentScene, sender) -> () in
             let scene = currentScene.gameScene ?? GameScene()
             currentScene.removeUIandPresentScene(scene)
         })
         return bt
     }()
-
+    
     private lazy var tutorialButton: TWButton = {
         let bt = TWButton(size: CGSize(width: 52, height: 52), normalColor: .clear, highlightedColor: nil)
         bt.setNormalStateLabelText("?")
@@ -196,7 +196,7 @@ class InitialScene: SKScene {
         bt.setAllStatesLabelFontName(AppDefines.FontName.defaultLight)
         bt.setAllStatesLabelFontSize(24)
         bt.setHighlightedStateSingleLabelFontColor(SKColor.white.withAlphaComponent(0.7))
-
+        
         bt.addClosure(.touchUpInside, target: self, closure: { (currentScene, sender) -> () in
             let sc = currentScene.score
             AppPersistence.alreadyPlayTutorial = false
@@ -217,36 +217,84 @@ class InitialScene: SKScene {
         return bt
     }()
     
-    private lazy var shareButton:TWButton = {
+    private lazy var shareButton: TWButton = {
         let bt = TWButton(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_share_n"),
                           highlightedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_share_h"))
         
         bt.addClosure(.touchUpInside, target: self, closure: { (currentScene, sender) -> () in
-
+            var objectsToShare: [Any] = []
+            
+            if let score = currentScene.score {
+                let pointsMessage = (score.points == 1 ? "SHARE_MESSAGE_COMPLETE_POINT" : "SHARE_MESSAGE_COMPLETE_POINTS")
+                let textToShare = String(format:NSLocalizedString("SHARE_MESSAGE_COMPLETE", comment: ""), score.points, NSLocalizedString(pointsMessage, comment: ""), score.highScorePoints())
+                objectsToShare.append(textToShare)
+            } else {
+                let textToShare = String(format:NSLocalizedString("SHARE_MESSAGE_TOP", comment: "message send when shared"), AppPersistence.highScorePoints)
+                objectsToShare.append(textToShare)
+            }
+            
+            let shareImageSize = CGSize(width: 600, height: 400)
+            let shareImageView = SKView(frame: CGRect(origin: .zero, size: shareImageSize))
+            
+            let shareImageOverlayView = UIImageView(image: UIImage(named: "bg1"))
+            shareImageOverlayView.frame = shareImageView.frame
+            shareImageOverlayView.contentMode = .scaleAspectFill
+            shareImageOverlayView.isUserInteractionEnabled = false
+            shareImageOverlayView.alpha = 0.16
+            shareImageView.addSubview(shareImageOverlayView)
+            
+            let shareImageScene = ShareImageScene(size: shareImageSize, score: currentScene.score)
+            shareImageView.presentScene(shareImageScene)
+            if let shareImage = shareImageView.asImage(.current) {
+                objectsToShare.append(shareImage)
+            }
+            
+            objectsToShare.append(AppDefines.Constants.appStoreLink)
+            
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            activityVC.excludedActivityTypes = [.addToReadingList,
+                                                .assignToContact,
+                                                .postToFlickr,
+                                                .postToVimeo,
+                                                .print]
+            
+            let gameView = AppDelegate.gameViewController.gameView
+            activityVC.popoverPresentationController?.sourceView = gameView
+            activityVC.popoverPresentationController?.sourceRect = CGRect(origin: CGPoint(x: gameView.frame.size.width/2, y: gameView.frame.size.height/2), size: .zero)
+            activityVC.popoverPresentationController?.permittedArrowDirections = .up
+            
+            AppDelegate.gameViewController.present(activityVC, animated: true, completion: nil)
         })
         return bt
     }()
     
-    private lazy var rateButton:TWButton = {
+    private lazy var rateButton: TWButton = {
         let bt = TWButton(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_rate_n"),
                           highlightedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_rate_h"))
-
+        
         bt.addClosure(.touchUpInside, target: self, closure: { (target, sender) -> () in
             let sc = target.score
-
+            
             let alert = UIAlertController(title: NSLocalizedString("RATE_ALERT_TITLE", comment: ""), message: NSLocalizedString("RATE_ALERT_MESSAGE", comment: ""), preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_ALERT_YES", comment: ""), style: .default, handler: { (action:UIAlertAction) -> Void in
                 
-            }))
+                let appID = AppDefines.Constants.appStoreID
+                let rateURLString = "itms-apps://itunes.apple.com/us/app/\(appID)?action=write-review"
 
+                if let url = URL(string: rateURLString) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }))
+            
             alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_ALERT_CANCEL", comment: ""), style: .cancel, handler: nil))
             AppDelegate.gameViewController.present(alert, animated: true, completion: nil)
         })
         return bt
     }()
     
-    private lazy var soundButton:TWSwitch = {
+    private lazy var soundButton: TWSwitch = {
         let sw = TWSwitch(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_on_n"),
                           selectedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_off_n"))
         sw.highlightedStateMultiTextureFromNormal = AppCache.instance.interfaceAtlas.textureNamed("bt_sound_on_h")
