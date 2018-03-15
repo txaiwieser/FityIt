@@ -10,6 +10,11 @@
 import SpriteKit
 
 extension SKColor {
+    static let mirageBlack: SKColor = SKColor(red:0.07, green:0.11, blue:0.16, alpha:1)
+    
+    static let darkBlack: SKColor = SKColor(red:0.19, green:0.23, blue:0.27, alpha:1)
+    
+    static let darkerBlack: SKColor = SKColor(red:0.03, green:0.07, blue:0.12, alpha:1)
     static let laranja: SKColor = SKColor(red:0.97, green:0.58, blue:0.31, alpha:1)
     
     static let rosa: SKColor = SKColor(red:0.91, green:0.31, blue:0.42, alpha:1)
@@ -26,4 +31,5 @@ extension SKColor {
     
     static let darkerVerde: SKColor = SKColor(red:0.22, green:0.62, blue:0, alpha:1)
     
+    static let lightTintColor: SKColor = .white
 }
