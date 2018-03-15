@@ -48,6 +48,19 @@ extension ShapeType {
         }
     }
     
+    func spinnerPath(size: CGSize) -> UIBezierPath {
+        switch self {
+        case .circle:
+            return Circle.spinnerPath(size: size)
+        case .square:
+            return Square.spinnerPath(size: size)
+        case .triangle:
+            return Triangle.spinnerPath(size: size)
+        case .pentagon:
+            return Pentagon.spinnerPath(size: size)
+        }
+    }
+    
     func color() -> SKColor {
         switch self {
         case .pentagon:
