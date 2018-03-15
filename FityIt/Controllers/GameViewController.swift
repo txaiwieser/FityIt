@@ -27,8 +27,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        TWControl.defaultTouchUpSoundFileName = "interface_sound_buttons_up.wav"
-        TWControl.defaultTouchDownSoundFileName = "interface_sound_buttons_down.wav"
+        TWControl.defaultTouchUpSoundFileName = "button_up.wav"
+        TWControl.defaultTouchDownSoundFileName = "button_down.wav"
         _ = SKAction.reloadSoundEffectsSettings()
         
         let overlayView = UIImageView(image: UIImage(named: "bg1"))

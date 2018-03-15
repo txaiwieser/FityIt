@@ -78,9 +78,9 @@ class AppCache {
     func resetSounds(initializeAfter: Bool) {
         if initializeAfter {
             creationSound = nil
-            successSound = SKAction.playSoundFileNamed("success_shape.wav", waitForCompletion: true)
-            successSoundSpecial = SKAction.playSoundFileNamed("success_shape_special.wav", waitForCompletion: true)
-            failureSound = SKAction.playSoundFileNamed("failure_shape_1.wav", waitForCompletion: true)
+            successSound = SKAction.playSoundFileNamed("shape_success.wav", waitForCompletion: true)
+            successSoundSpecial = SKAction.playSoundFileNamed("shape_special.wav", waitForCompletion: true)
+            failureSound = SKAction.playSoundFileNamed("shape_failure.wav", waitForCompletion: true)
         } else {
             creationSound = nil
             successSound = nil
