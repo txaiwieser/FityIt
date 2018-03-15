@@ -27,6 +27,7 @@
 		3325AF23205B078E008E1174 /* LPRFixedWidthLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF21205B078E008E1174 /* LPRFixedWidthLabelNode.m */; };
 		3325AF26205B09C2008E1174 /* GameScoreHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF25205B09C2008E1174 /* GameScoreHUD.swift */; };
 		3325AF28205B0B6B008E1174 /* GameGesturesHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */; };
+		3325AF2B205B0C99008E1174 /* SpinnerPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF2A205B0C99008E1174 /* SpinnerPart.swift */; };
 		33ECD9342058527500B6AE8E /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */; };
 		33ECD9352058527500B6AE8E /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */; };
 		33ECD9362058527500B6AE8E /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */; };
@@ -128,6 +129,7 @@
 		3325AF22205B078E008E1174 /* LPRFixedWidthLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPRFixedWidthLabelNode.h; sourceTree = "<group>"; };
 		3325AF25205B09C2008E1174 /* GameScoreHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScoreHUD.swift; sourceTree = "<group>"; };
 		3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameGesturesHUD.swift; sourceTree = "<group>"; };
+		3325AF2A205B0C99008E1174 /* SpinnerPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerPart.swift; sourceTree = "<group>"; };
 		33ECD8D520584B3300B6AE8E /* FityIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FityIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ECD8EA20584B3500B6AE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
@@ -223,6 +225,14 @@
 			path = LPRFixedWidthLabelNode;
 			sourceTree = "<group>";
 		};
+		3325AF29205B0C83008E1174 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				3325AF2A205B0C99008E1174 /* SpinnerPart.swift */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
 		33ECD8CC20584B3300B6AE8E = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +302,7 @@
 		33ECD9512058546000B6AE8E /* Game Objects */ = {
 			isa = PBXGroup;
 			children = (
+				3325AF29205B0C83008E1174 /* Spinner */,
 				33ECD96B20585E6B00B6AE8E /* PhysicsCategory.swift */,
 				33ECD9B52059D36000B6AE8E /* Others */,
 				33ECD9AC2059C5E500B6AE8E /* Score.swift */,
@@ -551,6 +562,7 @@
 				33ECD9A92059C42500B6AE8E /* GCHelper.swift in Sources */,
 				33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */,
 				3325AF132059E618008E1174 /* SKAction+SpecialEffects.swift in Sources */,
+				3325AF2B205B0C99008E1174 /* SpinnerPart.swift in Sources */,
 				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
 				3325AF0E2059E618008E1174 /* SKColor+Extensions.swift in Sources */,
 				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,

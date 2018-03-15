@@ -1,9 +1,9 @@
 //
 //  CategoryBitMasks.swift
-//  2TouchGame
+//  FityIt
 //
-//  Created by Txai Wieser on 20/02/15.
-//  Copyright (c) 2015 Txai Wieser. All rights reserved.
+//  Created by Txai Wieser on 13/03/18.
+//  Copyright © 2018 Txai Wieser. All rights reserved.
 //
 
 import Foundation
