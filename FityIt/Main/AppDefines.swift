@@ -15,10 +15,10 @@ enum AppDefines {
         //    let DEVICE_NOT_IPAD_NEITHER_64_BIT =  UIDevice.current.userInterfaceIdiom == .phone && (MemoryLayout<Int>.size == MemoryLayout<Int64>.size ? false : true)
     }
     
-    enum FontName: String {
-        case defaultLight = "VAGRoundedStd-Light"
-        case defaultBlack = "VAGRoundedStd-Black"
-        case defaultBold = "VAGRoundedStd-Bold"
+    enum FontName {
+        static let defaultLight = "VAGRoundedStd-Light"
+        static let defaultBlack = "VAGRoundedStd-Black"
+        static let defaultBold = "VAGRoundedStd-Bold"
     }
     
     enum Timings {
