@@ -25,6 +25,8 @@
 		3325AF1D205B02E6008E1174 /* ShareImageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF1B205B02E6008E1174 /* ShareImageScene.swift */; };
 		3325AF1F205B0393008E1174 /* UIView+AsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF1E205B0393008E1174 /* UIView+AsImage.swift */; };
 		3325AF23205B078E008E1174 /* LPRFixedWidthLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF21205B078E008E1174 /* LPRFixedWidthLabelNode.m */; };
+		3325AF26205B09C2008E1174 /* GameScoreHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF25205B09C2008E1174 /* GameScoreHUD.swift */; };
+		3325AF28205B0B6B008E1174 /* GameGesturesHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */; };
 		33ECD9342058527500B6AE8E /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */; };
 		33ECD9352058527500B6AE8E /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */; };
 		33ECD9362058527500B6AE8E /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */; };
@@ -124,6 +126,8 @@
 		3325AF20205B078C008E1174 /* FityIt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FityIt-Bridging-Header.h"; sourceTree = "<group>"; };
 		3325AF21205B078E008E1174 /* LPRFixedWidthLabelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPRFixedWidthLabelNode.m; sourceTree = "<group>"; };
 		3325AF22205B078E008E1174 /* LPRFixedWidthLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPRFixedWidthLabelNode.h; sourceTree = "<group>"; };
+		3325AF25205B09C2008E1174 /* GameScoreHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScoreHUD.swift; sourceTree = "<group>"; };
+		3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameGesturesHUD.swift; sourceTree = "<group>"; };
 		33ECD8D520584B3300B6AE8E /* FityIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FityIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ECD8EA20584B3500B6AE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
@@ -397,6 +401,8 @@
 			isa = PBXGroup;
 			children = (
 				33ECD9B62059D36B00B6AE8E /* ScoreContainer.swift */,
+				3325AF25205B09C2008E1174 /* GameScoreHUD.swift */,
+				3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */,
 				3325AF142059E618008E1174 /* SKNode+Extensions.swift in Sources */,
 				33ECD99820599B9400B6AE8E /* GameViewController.swift in Sources */,
+				3325AF26205B09C2008E1174 /* GameScoreHUD.swift in Sources */,
 				33ECD97220597E0100B6AE8E /* AppColors.swift in Sources */,
 				3325AF102059E618008E1174 /* Int+Extensions.swift in Sources */,
 				33ECD9942059974900B6AE8E /* SplashScreenViewController.swift in Sources */,
@@ -528,6 +535,7 @@
 				33ECD96920585CF200B6AE8E /* AppBuildMode.swift in Sources */,
 				33ECD9AB2059C51F00B6AE8E /* GameScene.swift in Sources */,
 				3325AF0F2059E618008E1174 /* CGVector+Extensions.swift in Sources */,
+				3325AF28205B0B6B008E1174 /* GameGesturesHUD.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
 				3325AF1D205B02E6008E1174 /* ShareImageScene.swift in Sources */,
 				3325AF002059DE40008E1174 /* SKAction+AppearDisappear.swift in Sources */,
