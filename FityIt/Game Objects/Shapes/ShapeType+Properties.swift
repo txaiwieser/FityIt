@@ -61,6 +61,19 @@ extension ShapeType {
         }
     }
     
+    func drawBorder(onPath path: UIBezierPath, size: CGSize) {
+        switch self {
+        case .circle:
+            Circle.drawBorder(onPath: path, size: size)
+        case .square:
+            Square.drawBorder(onPath: path, size: size)
+        case .triangle:
+            Triangle.drawBorder(onPath: path, size: size)
+        case .pentagon:
+            Pentagon.drawBorder(onPath: path, size: size)
+        }
+    }
+    
     func color() -> SKColor {
         switch self {
         case .pentagon:

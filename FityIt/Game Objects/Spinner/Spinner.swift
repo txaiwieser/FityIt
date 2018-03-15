@@ -40,7 +40,7 @@ class Spinner: SKSpriteNode {
             node.zPosition = 10
             addChild(node)
             
-            shape.borderPath(path: line, size: lineSize)
+            shape.drawBorder(onPath: line, size: lineSize)
 
             line.apply(CGAffineTransform(translationX: 0, y: frameSide / 2))
             line.apply(CGAffineTransform(rotationAngle: .pi / 4))
