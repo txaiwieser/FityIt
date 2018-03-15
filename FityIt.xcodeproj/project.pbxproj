@@ -22,6 +22,8 @@
 		3325AF172059E618008E1174 /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF0B2059E618008E1174 /* SKTAudio.swift */; };
 		3325AF182059E618008E1174 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF0C2059E618008E1174 /* Vector3.swift */; };
 		3325AF192059E618008E1174 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF0D2059E618008E1174 /* CGFloat+Extensions.swift */; };
+		3325AF1D205B02E6008E1174 /* ShareImageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF1B205B02E6008E1174 /* ShareImageScene.swift */; };
+		3325AF1F205B0393008E1174 /* UIView+AsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF1E205B0393008E1174 /* UIView+AsImage.swift */; };
 		33ECD9342058527500B6AE8E /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */; };
 		33ECD9352058527500B6AE8E /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */; };
 		33ECD9362058527500B6AE8E /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */; };
@@ -116,6 +118,8 @@
 		3325AF0B2059E618008E1174 /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
 		3325AF0C2059E618008E1174 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		3325AF0D2059E618008E1174 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		3325AF1B205B02E6008E1174 /* ShareImageScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareImageScene.swift; sourceTree = "<group>"; };
+		3325AF1E205B0393008E1174 /* UIView+AsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AsImage.swift"; sourceTree = "<group>"; };
 		33ECD8D520584B3300B6AE8E /* FityIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FityIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ECD8EA20584B3500B6AE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
@@ -322,6 +326,7 @@
 				33ECD96D205869C700B6AE8E /* Numbers+Random.swift */,
 				33ECD9B12059CB4800B6AE8E /* SKAction+SoundEffects.swift */,
 				3325AEFF2059DE40008E1174 /* SKAction+AppearDisappear.swift */,
+				3325AF1E205B0393008E1174 /* UIView+AsImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			children = (
 				33ECD9A22059BF5400B6AE8E /* InitialScene.swift */,
 				33ECD9AA2059C51E00B6AE8E /* GameScene.swift */,
+				3325AF1B205B02E6008E1174 /* ShareImageScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				33ECD9AB2059C51F00B6AE8E /* GameScene.swift in Sources */,
 				3325AF0F2059E618008E1174 /* CGVector+Extensions.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
+				3325AF1D205B02E6008E1174 /* ShareImageScene.swift in Sources */,
 				3325AF002059DE40008E1174 /* SKAction+AppearDisappear.swift in Sources */,
 				33ECD9B42059CFA900B6AE8E /* SKNode+AfterDelay.swift in Sources */,
 				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
@@ -525,6 +532,7 @@
 				33ECD9AD2059C5E500B6AE8E /* Score.swift in Sources */,
 				33ECD9B22059CB4800B6AE8E /* SKAction+SoundEffects.swift in Sources */,
 				3325AF182059E618008E1174 /* Vector3.swift in Sources */,
+				3325AF1F205B0393008E1174 /* UIView+AsImage.swift in Sources */,
 				33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,7 +685,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 99MCMQ6KGP;
 				INFOPLIST_FILE = FityIt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,7 +707,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FityIt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
