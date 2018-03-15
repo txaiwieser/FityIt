@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     
     override func loadView() {
         let skView = SKView()
+        skView.frame = UIScreen.main.bounds
         skView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         skView.showsFPS = BUILD_MODE == .debug
         skView.showsNodeCount = BUILD_MODE == .debug
