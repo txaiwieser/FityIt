@@ -98,7 +98,7 @@ class Shape: SKSpriteNode {
         physicsBody = nil
 
         let disappear: SKAction = .disappearAnimated(self, time: CGFloat(disappearDuration))
-        let sequence = SKAction.sequence([disappear, .removeFromParent()])
+        let sequence: SKAction = .sequence([disappear, .removeFromParent()])
         if waitToDisappearDuration > 0 {
             run(.afterDelay(waitToDisappearDuration, performAction: sequence))
         } else {
