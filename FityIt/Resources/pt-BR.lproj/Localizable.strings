@@ -18,19 +18,6 @@
 "MSG_READY" = "Pronto?";
 
 
-"REMOVE_ADS_ALERT_TITLE"   = "Você deseja remover os anúncios?";
-
-"REMOVE_ADS_ALERT_MESSAGE" = "Com a remoção dos anúncios você aproveitará o jogo livre de distrações.";
-
-"REMOVE_ADS_ALERT_BUY"     = "Comprar";
-
-"REMOVE_ADS_ALERT_RESTORE" = "Restaurar compra";
-
-"REMOVE_ADS_ALERT_CANCEL"  = "Cancelar";
-
-
-
-
 "RATE_ALERT_TITLE"         = "Você deseja ir avaliar o jogo? =)";
 
 "RATE_ALERT_MESSAGE"       = "Isso é muito importante pra gente! Não vai demorar mais de um minuto. Obrigado pelo seu apoio!";
