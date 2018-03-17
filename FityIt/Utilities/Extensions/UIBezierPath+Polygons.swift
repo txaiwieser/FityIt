@@ -26,11 +26,14 @@ extension UIBezierPath {
     
     convenience init(pentagonWith width: CGFloat) {
         self.init()
-        let sides: CGFloat = 5
+        
+        let sidesCount: Int = 5
+        let sides = CGFloat(sidesCount)
+        
         let lenght = width * sqrt((sides - sqrt(sides)) / 10)
         
-        for i in 0..<5 {
-            let angle: CGFloat = CGFloat(i) * ((sides * .pi) / sides) - (.pi / 2)
+        for i in 0..<sidesCount {
+            let angle: CGFloat = CGFloat(i) * ((2 * .pi) / sides) - (.pi / 2)
             let point = CGPoint(x: lenght * cos(angle), y: -lenght * sin(angle) + 2 * ((width / 2) - lenght))
             
             if i == 0 { move(to: point) }

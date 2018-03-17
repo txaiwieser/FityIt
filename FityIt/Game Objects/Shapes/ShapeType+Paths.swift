@@ -155,14 +155,14 @@ extension ShapeType {
             let lenght = width * (sqrt(5) - 1) / 2 * 1.05
             
             let i72: CGFloat = 2 * .pi / 5
-            let i54 = .pi - i72 / 2
+            let i54 = (.pi - i72) / 2
             let i36 = .pi - .pi / 2 - i54
             let x = lenght * cos(i36)
             let y = lenght * sin(i36)
             let in1 = x - lenght / 2
             
             let centerHeight = tan(i54) * lenght / 2
-            let topHeight = 1 / cos(i54) * lenght / 2
+            let topHeight = (1 / cos(i54)) * lenght / 2
             let help1 = topHeight - y
             let totalHeight = centerHeight + help1
             
@@ -188,14 +188,14 @@ extension ShapeType {
             let lenght = width * (sqrt(5) - 1) / 2 * 1.05
             
             let i72: CGFloat = 2 * .pi / 5
-            let i54 = .pi - i72 / 2
+            let i54 = (.pi - i72) / 2
             let i36 = .pi - .pi / 2 - i54
             let x = lenght * cos(i36)
             let y = lenght * sin(i36)
             let in1 = x - lenght / 2
             
             let centerHeight = tan(i54) * lenght / 2
-            let topHeight = 1 / cos(i54) * lenght / 2
+            let topHeight = (1 / cos(i54)) * lenght / 2
             let help1 = topHeight - y
             let totalHeight = centerHeight + help1
             

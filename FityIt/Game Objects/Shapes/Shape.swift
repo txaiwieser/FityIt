@@ -66,7 +66,7 @@ class Shape: SKSpriteNode {
     }
     
     func countToExplode() {
-        self.run(SKAction.sequence([SKAction.wait(forDuration: 1), SKAction.run({ () -> Void in
+        run(.sequence([.wait(forDuration: 1), .run({ () -> Void in
             self.failure()
         })]), withKey: ActionKey.isAboutToExplode)
     }
