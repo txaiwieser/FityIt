@@ -24,6 +24,12 @@ class InitialScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         animationApear?()
+        defer {
+            if gameScene == nil {
+                AppCache.instance.initializeGameTextures(with: GameScene.calculateSceneSize(view.frame.size))
+                gameScene = GameScene()
+            }
+        }
     }
     
     override func willMove(from view: SKView) {
@@ -39,7 +45,6 @@ class InitialScene: SKScene {
         
         if let score = score { AppPersistence.saveNewScore(score) }
         
-        gameScene = GameScene()
         backgroundColor = .black
         AppCache.instance.initializeInitialScreenBackgroundTexture(screenSize: newSize)
         
@@ -309,7 +314,7 @@ class InitialScene: SKScene {
     
     #if SNAPSHOT
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let scene = GameScene()
+        let scene = gameScene ?? GameScene()
         AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toGame)
     }
     #endif
