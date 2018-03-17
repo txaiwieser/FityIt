@@ -33,6 +33,8 @@
 		3325AF33205C16D2008E1174 /* SKSpriteNode+SetTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */; };
 		3325AF35205C192F008E1174 /* SKAction+TextureGlitchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF34205C192F008E1174 /* SKAction+TextureGlitchs.swift */; };
 		3325AF37205C6CB3008E1174 /* CGPoint+IsCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */; };
+		33BC56F1205DD5430022728D /* FityIt_Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BC56F0205DD5430022728D /* FityIt_Screenshots.swift */; };
+		33BC56FA205DD5AA0022728D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BC56F9205DD5AA0022728D /* SnapshotHelper.swift */; };
 		33ECD9342058527500B6AE8E /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */; };
 		33ECD9352058527500B6AE8E /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */; };
 		33ECD9362058527500B6AE8E /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */; };
@@ -96,6 +98,13 @@
 			remoteGlobalIDString = E9099AC71B9F589500758069;
 			remoteInfo = TWSpriteKitUtils;
 		};
+		33BC56F3205DD5430022728D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33ECD8CD20584B3300B6AE8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33ECD8D420584B3300B6AE8E;
+			remoteInfo = FityIt;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,6 +149,10 @@
 		3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+SetTexture.swift"; sourceTree = "<group>"; };
 		3325AF34205C192F008E1174 /* SKAction+TextureGlitchs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+TextureGlitchs.swift"; sourceTree = "<group>"; };
 		3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+IsCloseTo.swift"; sourceTree = "<group>"; };
+		33BC56EE205DD5430022728D /* FityIt-Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FityIt-Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33BC56F0205DD5430022728D /* FityIt_Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FityIt_Screenshots.swift; sourceTree = "<group>"; };
+		33BC56F2205DD5430022728D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33BC56F9205DD5AA0022728D /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		33ECD8D520584B3300B6AE8E /* FityIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FityIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ECD8EA20584B3500B6AE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
@@ -186,6 +199,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33BC56EB205DD5430022728D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33ECD8D220584B3300B6AE8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,10 +264,21 @@
 			path = Spinner;
 			sourceTree = "<group>";
 		};
+		33BC56EF205DD5430022728D /* FityIt-Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				33BC56F0205DD5430022728D /* FityIt_Screenshots.swift */,
+				33BC56F9205DD5AA0022728D /* SnapshotHelper.swift */,
+				33BC56F2205DD5430022728D /* Info.plist */,
+			);
+			path = "FityIt-Screenshots";
+			sourceTree = "<group>";
+		};
 		33ECD8CC20584B3300B6AE8E = {
 			isa = PBXGroup;
 			children = (
 				33ECD8D720584B3300B6AE8E /* FityIt */,
+				33BC56EF205DD5430022728D /* FityIt-Screenshots */,
 				33ECD8D620584B3300B6AE8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -256,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				33ECD8D520584B3300B6AE8E /* FityIt.app */,
+				33BC56EE205DD5430022728D /* FityIt-Screenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,6 +468,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		33BC56ED205DD5430022728D /* FityIt-Screenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33BC56F8205DD5430022728D /* Build configuration list for PBXNativeTarget "FityIt-Screenshots" */;
+			buildPhases = (
+				33BC56EA205DD5430022728D /* Sources */,
+				33BC56EB205DD5430022728D /* Frameworks */,
+				33BC56EC205DD5430022728D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33BC56F4205DD5430022728D /* PBXTargetDependency */,
+			);
+			name = "FityIt-Screenshots";
+			productName = "FityIt-Screenshots";
+			productReference = 33BC56EE205DD5430022728D /* FityIt-Screenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		33ECD8D420584B3300B6AE8E /* FityIt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33ECD8ED20584B3500B6AE8E /* Build configuration list for PBXNativeTarget "FityIt" */;
@@ -465,6 +515,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Txai Wieser";
 				TargetAttributes = {
+					33BC56ED205DD5430022728D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 33ECD8D420584B3300B6AE8E;
+					};
 					33ECD8D420584B3300B6AE8E = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
@@ -492,6 +546,7 @@
 			projectRoot = "";
 			targets = (
 				33ECD8D420584B3300B6AE8E /* FityIt */,
+				33BC56ED205DD5430022728D /* FityIt-Screenshots */,
 			);
 		};
 /* End PBXProject section */
@@ -514,6 +569,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33BC56EC205DD5430022728D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33ECD8D320584B3300B6AE8E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,6 +599,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33BC56EA205DD5430022728D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33BC56F1205DD5430022728D /* FityIt_Screenshots.swift in Sources */,
+				33BC56FA205DD5AA0022728D /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33ECD8D120584B3300B6AE8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -602,6 +673,11 @@
 			name = TWSpriteKitUtils;
 			targetProxy = 3325AEE32059DB2D008E1174 /* PBXContainerItemProxy */;
 		};
+		33BC56F4205DD5430022728D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33ECD8D420584B3300B6AE8E /* FityIt */;
+			targetProxy = 33BC56F3205DD5430022728D /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -618,6 +694,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		33BC56F5205DD5430022728D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FityIt-Screenshots/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FityIt;
+			};
+			name = Debug;
+		};
+		33BC56F6205DD5430022728D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FityIt-Screenshots/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FityIt;
+			};
+			name = Release;
+		};
 		33ECD8EB20584B3500B6AE8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -785,6 +897,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33BC56F8205DD5430022728D /* Build configuration list for PBXNativeTarget "FityIt-Screenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33BC56F5205DD5430022728D /* Debug */,
+				33BC56F6205DD5430022728D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		33ECD8D020584B3300B6AE8E /* Build configuration list for PBXProject "FityIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
