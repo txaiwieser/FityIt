@@ -264,18 +264,14 @@ class InitialScene: SKScene {
             
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
-            activityVC.excludedActivityTypes = [.addToReadingList,
-                                                .assignToContact,
-                                                .postToFlickr,
-                                                .postToVimeo,
-                                                .print]
-            
             let gameView = AppDelegate.gameViewController.gameView
             activityVC.popoverPresentationController?.sourceView = gameView
             activityVC.popoverPresentationController?.sourceRect = CGRect(origin: CGPoint(x: gameView.frame.size.width/2, y: gameView.frame.size.height/2), size: .zero)
             activityVC.popoverPresentationController?.permittedArrowDirections = .up
             
-            AppDelegate.gameViewController.present(activityVC, animated: true, completion: nil)
+            defer {
+                AppDelegate.gameViewController.present(activityVC, animated: true, completion: nil)
+            }
         })
         return bt
     }()
