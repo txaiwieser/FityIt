@@ -65,8 +65,6 @@ class Shape: SKSpriteNode {
         self.physicsBody = physicsBody
     }
     
-    
-    
     func countToExplode() {
         self.run(SKAction.sequence([SKAction.wait(forDuration: 1), SKAction.run({ () -> Void in
             self.failure()
@@ -74,67 +72,64 @@ class Shape: SKSpriteNode {
     }
     
     func releaseMe() {
-//        let effect = SKTMoveEffect(node: self, duration: moveDuration, startPosition: self.position, endPosition: CGPoint(x: 0, y: -scene!.size.height/2))
-//        effect.timingFunction = SKTTimingFunctionLinear
-//        let ac = SKAction.actionWithEffect(effect)
-//        self.run(ac, withKey: ActionKey.move.rawValue)
+        let effect = SKTMoveEffect(node: self, duration: moveDuration, startPosition: position, endPosition: CGPoint(x: 0, y: -scene!.size.height/2))
+        effect.timingFunction = SKTTimingFunctionLinear
+        run(.actionWithEffect(effect), withKey: ActionKey.move)
     }
     
-    var creationTextures:[SKTexture]?
-    
     func create(_ completion: (() -> Void)? = nil) {
-//        let act = SKAction.apearAnimated(self, time: CGFloat(Constant.creationDuration), scale: 1)
-//
-//        if let c = completion { run(act, completion: c) }
-//        else { run(act) }
-//
-//        if let a = GameSingleton.instance.creationSound { run(SKAction.afterDelay(Constant.creationDuration, performAction: a)) }
+        let appear: SKAction = .appearAnimated(self, time: CGFloat(creationDuration), scale: 1)
+
+        if let completion = completion { run(appear, completion: completion) }
+        else { run(appear) }
+
+        if let sound = AppCache.instance.creationSound {
+            run(.afterDelay(creationDuration, performAction: sound))
+        }
     }
     
     func success(_ special: Bool, completion: (() -> Void)? = nil) {
+        actived = false
+        removeAllActions()
         
-//        actived = false
-//        self.removeAllActions()
-//        if special {
-//            if let a = GameSingleton.instance.successSoundSpecial { run(a) }
-//        } else {
-//            if let a = GameSingleton.instance.successSound { run(a) }
-//        }
-//        self.physicsBody = nil
-//
-//        let a = SKAction.disapearAnimated(self, time: CGFloat(disappearDuration))
-//        let seq = SKAction.sequence([a, SKAction.removeFromParent()])
-//        if waitToDisappearDuration > 0 {
-//            self.run(SKAction.afterDelay(waitToDisappearDuration, performAction: seq))
-//        } else {
-//            self.run(seq)
-//        }
-        
+        if let sound = special ? AppCache.instance.successSoundSpecial : AppCache.instance.successSound {
+            run(sound)
+        }
+        physicsBody = nil
+
+        let disappear: SKAction = .disappearAnimated(self, time: CGFloat(disappearDuration))
+        let sequence = SKAction.sequence([disappear, .removeFromParent()])
+        if waitToDisappearDuration > 0 {
+            run(.afterDelay(waitToDisappearDuration, performAction: sequence))
+        } else {
+            run(sequence)
+        }
     }
     
     func failure(_ completion: (() -> Void)? = nil) {
-//        actived = false
-//        self.removeAllActions()
-//        if let a = GameSingleton.instance.failureSound { run(a) }
-//        self.physicsBody = nil
-//        let a = SKAction.disapearAnimated(self, time: CGFloat(failureDuration/2))
-//        let action = SKAction.sequence([SKAction.group([a, SKAction.wait(forDuration: failureDuration*2)]), SKAction.removeFromParent()])
-//
-//        if let c = completion {
-//            self.run(action, completion: c)
-//        } else {
-//            self.run(action)
-//        }
+        actived = false
+        removeAllActions()
+        if let failure = AppCache.instance.failureSound { run(failure) }
+        physicsBody = nil
+        
+        let disappear: SKAction = .disappearAnimated(self, time: CGFloat(failureDuration/2))
+        
+        let sequence: SKAction = .sequence([.group([disappear, .wait(forDuration: failureDuration*2)]), .removeFromParent()])
+
+        if let completion = completion {
+            run(sequence, completion: completion)
+        } else {
+            run(sequence)
+        }
     }
     
     
     func animationAction(_ textures: [SKTexture], duration: TimeInterval, completion: (() -> Void)? = nil) -> SKAction {
-        let group = SKAction.animate(with: textures, timePerFrame: duration/TimeInterval(textures.count), resize: true, restore: false)
-        var seq = [group]
-//        if let c = completion {
-//            let wc = SKAction.afterDelay(duration, runBlock: c)
-//            seq.append(wc)
-//        }
-        return SKAction.group(seq)
+        let group: SKAction = .animate(with: textures, timePerFrame: duration/TimeInterval(textures.count), resize: true, restore: false)
+        var sequence = [group]
+        if let completion = completion {
+            sequence.append(.afterDelay(duration, runBlock: completion))
+        }
+        return .group(sequence)
     }
 }
