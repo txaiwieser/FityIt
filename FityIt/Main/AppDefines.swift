@@ -12,8 +12,8 @@ import SpriteKit
 enum AppDefines {
     enum Constants {
         static let mainLeaderboardID = "FityItLeaderboard"
-        static let appStoreID = "id1114394063"
-        static let appStoreLink = ""
+        static let appStoreID = "id991444581"
+        static let appStoreLink = "https://itunes.apple.com/us/app/id991444581"
         static let isiPad = UIDevice.current.userInterfaceIdiom == .pad
         static let isiPhoneX: Bool = UIDevice().userInterfaceIdiom == .phone && UIScreen.main.nativeBounds.height == 2436
     }

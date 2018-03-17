@@ -8,6 +8,7 @@
 
 import SpriteKit
 import TWSpriteKitUtils
+import StoreKit
 
 class InitialScene: SKScene {
     private var animationApear: (() -> Void)? = nil
@@ -28,6 +29,10 @@ class InitialScene: SKScene {
             if gameScene == nil {
                 AppCache.instance.initializeGameTextures(with: GameScene.calculateSceneSize(view.frame.size))
                 gameScene = GameScene()
+            }
+            
+            if AppPersistence.highScorePoints > 10 && AppPersistence.matchesPlayedSinceLaunch > 6 {
+                SKStoreReviewController.requestReview()
             }
         }
     }
