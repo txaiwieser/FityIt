@@ -1,0 +1,14 @@
+devices([
+  "iPhone SE",
+  "iPhone 8",
+  "iPhone 8 Plus",
+  "iPhone X",
+  "iPad Pro (9.7-inch)",
+  "iPad Pro (12.9-inch)"
+])
+
+languages([
+  'en-US',
+  'pt-PT',
+  'pt-BR'
+])
