@@ -84,6 +84,8 @@ class InitialScene: SKScene {
         bottomStack.add(node: margin)
         bottomStack.add(node: squaresStack)
         bottomStack.add(node: margin.copy() as! SKNode)
+        bottomStack.add(node: margin.copy() as! SKNode)
+        if AppDefines.Constants.isiPhoneX { bottomStack.add(node: margin.copy() as! SKNode) }
         bottomStack.reloadStack()
         
         bottomStack.position = CGPoint(x: newSize.width/2, y: bottomStack.size.height/2)
@@ -158,9 +160,8 @@ class InitialScene: SKScene {
     
     static func calculateSceneSize(_ size: CGSize? = nil) -> CGSize {
         let size = size ?? AppDelegate.gameViewController.gameView.frame.size
-        let isiPad = UIDevice.current.userInterfaceIdiom == .pad
-        
-        let defaultHeight: CGFloat = (isiPad ? 1024 : 640)
+
+        let defaultHeight: CGFloat = (AppDefines.Constants.isiPad ? 1024 : (AppDefines.Constants.isiPhoneX ? 800 : 640))
         let const = defaultHeight / size.height
         return CGSize(width: const * size.width, height: defaultHeight)
     }

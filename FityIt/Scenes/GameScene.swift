@@ -304,7 +304,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     private func releaseShape() {
-        let shapeStartPositionY: CGFloat = self.size.height/2 - Shape.defaultSize.height
+        let shapeStartPositionY: CGFloat = self.size.height/2 - Shape.defaultSize.height - 8 - (AppDefines.Constants.isiPhoneX ? 30 : 0)
         
         let node = ShapeType.randomShape()
         node.position.y = shapeStartPositionY
@@ -333,7 +333,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     static func calculateSceneSize(_ size: CGSize? = nil) -> CGSize {
         let size = size ?? AppDelegate.gameViewController.gameView.frame.size
-        let defaultHeight: CGFloat = 736
+        let defaultHeight: CGFloat = 736 + (AppDefines.Constants.isiPhoneX ? 30 : 0)
         let const = defaultHeight / size.height
         return CGSize(width: const * size.width, height: defaultHeight)
     }
