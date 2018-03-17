@@ -44,9 +44,8 @@ class GameViewController: UIViewController {
         overlayView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
         #if SNAPSHOT
-            PersistenceHandler.resetUserDefaults()
-            PersistenceHandler.shouldDisplayAds = false
-            PersistenceHandler.setHighScorePoints(77)
+            AppPersistence.resetUserDefaults()
+            AppPersistence.highScorePoints = 77
             let scene = InitialScene(score: Score(points: 14))
             gameView.presentScene(scene)
         #else

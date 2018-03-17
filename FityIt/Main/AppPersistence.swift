@@ -57,7 +57,7 @@ enum AppPersistence {
     }
     
 
-    private(set) static var highScorePoints: Int {
+    static var highScorePoints: Int {
         set {
             UserDefaults.standard.setValue(newValue, forKey: #function)
             UserDefaults.standard.synchronize()

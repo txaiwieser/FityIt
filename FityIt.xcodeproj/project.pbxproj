@@ -704,6 +704,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-D SNAPSHOT";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -722,6 +723,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-D SNAPSHOT";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

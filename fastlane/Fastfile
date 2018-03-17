@@ -14,6 +14,9 @@ default_platform(:ios)
 platform :ios do
   desc "Generate new localized screenshots"
   lane :screenshots do
-    capture_screenshots(scheme: "FityIt-Screenshots")
+    capture_screenshots(
+    	scheme: "FityIt-Screenshots",
+    	xcargs: "OTHER_SWIFT_FLAGS=\"-D SNAPSHOT\""
+   	)
   end
 end
