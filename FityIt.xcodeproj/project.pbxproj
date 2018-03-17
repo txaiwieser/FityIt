@@ -29,6 +29,10 @@
 		3325AF28205B0B6B008E1174 /* GameGesturesHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */; };
 		3325AF2B205B0C99008E1174 /* SpinnerPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF2A205B0C99008E1174 /* SpinnerPart.swift */; };
 		3325AF2D205B1407008E1174 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF2C205B1407008E1174 /* Spinner.swift */; };
+		3325AF31205C0D10008E1174 /* Double+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF2F205C0D0F008E1174 /* Double+Relative.swift */; };
+		3325AF33205C16D2008E1174 /* SKSpriteNode+SetTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */; };
+		3325AF35205C192F008E1174 /* SKAction+GlitchColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF34205C192F008E1174 /* SKAction+GlitchColors.swift */; };
+		3325AF37205C6CB3008E1174 /* CGPoint+IsCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */; };
 		33ECD9342058527500B6AE8E /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */; };
 		33ECD9352058527500B6AE8E /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92B2058527500B6AE8E /* VAGRoundedStd-Black.otf */; };
 		33ECD9362058527500B6AE8E /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33ECD92C2058527500B6AE8E /* VAGRoundedStd-Light.otf */; };
@@ -132,6 +136,10 @@
 		3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameGesturesHUD.swift; sourceTree = "<group>"; };
 		3325AF2A205B0C99008E1174 /* SpinnerPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerPart.swift; sourceTree = "<group>"; };
 		3325AF2C205B1407008E1174 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		3325AF2F205C0D0F008E1174 /* Double+Relative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Relative.swift"; sourceTree = "<group>"; };
+		3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+SetTexture.swift"; sourceTree = "<group>"; };
+		3325AF34205C192F008E1174 /* SKAction+GlitchColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+GlitchColors.swift"; sourceTree = "<group>"; };
+		3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+IsCloseTo.swift"; sourceTree = "<group>"; };
 		33ECD8D520584B3300B6AE8E /* FityIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FityIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ECD8EA20584B3500B6AE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ECD92A2058527500B6AE8E /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
@@ -350,6 +358,8 @@
 		33ECD970205869DA00B6AE8E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3325AF2F205C0D0F008E1174 /* Double+Relative.swift */,
+				3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */,
 				33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */,
 				33ECD9B32059CFA900B6AE8E /* SKNode+AfterDelay.swift */,
 				33ECD99B2059B0D900B6AE8E /* SKTexture+Extensions.swift */,
@@ -358,6 +368,8 @@
 				33ECD9B12059CB4800B6AE8E /* SKAction+SoundEffects.swift */,
 				3325AEFF2059DE40008E1174 /* SKAction+AppearDisappear.swift */,
 				3325AF1E205B0393008E1174 /* UIView+AsImage.swift */,
+				3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */,
+				3325AF34205C192F008E1174 /* SKAction+GlitchColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -534,15 +546,19 @@
 				33ECD96A20585CF200B6AE8E /* AppDelegate.swift in Sources */,
 				33ECD99A2059A33A00B6AE8E /* AppCache.swift in Sources */,
 				33ECD9A32059BF5500B6AE8E /* InitialScene.swift in Sources */,
+				3325AF37205C6CB3008E1174 /* CGPoint+IsCloseTo.swift in Sources */,
 				33ECD96E205869C700B6AE8E /* Numbers+Random.swift in Sources */,
 				33ECD96C20585E6B00B6AE8E /* PhysicsCategory.swift in Sources */,
 				33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */,
+				3325AF31205C0D10008E1174 /* Double+Relative.swift in Sources */,
 				3325AF142059E618008E1174 /* SKNode+Extensions.swift in Sources */,
 				33ECD99820599B9400B6AE8E /* GameViewController.swift in Sources */,
+				3325AF33205C16D2008E1174 /* SKSpriteNode+SetTexture.swift in Sources */,
 				3325AF26205B09C2008E1174 /* GameScoreHUD.swift in Sources */,
 				33ECD97220597E0100B6AE8E /* AppColors.swift in Sources */,
 				3325AF102059E618008E1174 /* Int+Extensions.swift in Sources */,
 				33ECD9942059974900B6AE8E /* SplashScreenViewController.swift in Sources */,
+				3325AF35205C192F008E1174 /* SKAction+GlitchColors.swift in Sources */,
 				3325AF122059E618008E1174 /* SKAction+Extensions.swift in Sources */,
 				3325AF172059E618008E1174 /* SKTAudio.swift in Sources */,
 				33ECD9A52059BFCD00B6AE8E /* AppPersistence.swift in Sources */,
