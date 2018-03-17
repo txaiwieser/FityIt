@@ -10,7 +10,7 @@ import SpriteKit
 
 class Spinner: SKSpriteNode {
     private let sectionsCount: Int = 8
-    private let frameSide: CGFloat = 180
+    let frameSide: CGFloat = 180
     private var section: CGFloat {
         return 2 * .pi / CGFloat(sectionsCount)
     }

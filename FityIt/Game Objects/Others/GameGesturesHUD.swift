@@ -27,7 +27,7 @@ class GameGesturesHUD: SKNode {
         return n
     }()
     
-    private func addMarker() {
+    func addMarker() {
         if marker.parent == nil {
             addChild(marker)
             marker.setScale(1)

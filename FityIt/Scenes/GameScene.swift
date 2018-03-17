@@ -59,7 +59,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-    
+
+    private var shapeStartPositionY: CGFloat {
+        return size.height / 2 - Shape.defaultSize.height - 8 - (AppDefines.Constants.isiPhoneX ? 30 : 0)
+    }
+
+    private var shapeEndPositionY: CGFloat {
+        return -size.height / 2 + spinner.frameSide
+    }
+
     private enum Constant {
         static let zPosShape: CGFloat = 1000 + 2
         static let zPosSpinner: CGFloat = 1000
@@ -70,7 +78,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     init(isEndlessGame: Bool = false) {
         ShapeType.lastRandomShapeIndex = 0
         let newSize = GameScene.calculateSceneSize()
-//        AppCache.instance.initializeGameTextures(with: newSize)
         self.isEndlessGame = isEndlessGame
         self.gradientNode = SKSpriteNode(texture: AppCache.instance.gradient(shape: .circle), size: newSize)
         super.init(size: newSize)
@@ -304,8 +311,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     private func releaseShape() {
-        let shapeStartPositionY: CGFloat = self.size.height/2 - Shape.defaultSize.height - 8 - (AppDefines.Constants.isiPhoneX ? 30 : 0)
-        
         let node = ShapeType.randomShape()
         node.position.y = shapeStartPositionY
         node.zPosition = Constant.zPosShape
@@ -340,74 +345,79 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 
     #if SNAPSHOT
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//
-//        if let c = gameSceneNodeContainer.childNodeWithName("sn_circle") as? Shape {
-//            // Prepare for SNAPSHOT 2
-//            scoreBoard.removeScoreLabel()
-//            c.removeFromParent()
-//            gradientNode.setTexture(GameSingleton.instance.gradient(c.shapeName), byCroppingWith: GameSingleton.instance.backgroundCrop(c.shapeName), duration: 0.1)
-//            let cc = Square()
-//            cc.creationDuration = 0.1
-//            cc.create()
-//            cc.name = "sn_square"
-//            cc.position.y = yStartPosition - (yStartPosition + abs(yEndPosition))*(1/3)
-//            cc.zPosition = ZPOS_SHAPE
-//            addChildToContainer(cc)
-//            spinner.spinn(false, delay: 0.1)
-//        } else if let c = gameSceneNodeContainer.childNodeWithName("sn_square") as? Shape {
-//            // Prepare for SNAPSHOT 3
-//            c.removeFromParent()
-//            gradientNode.setTexture(GameSingleton.instance.gradient(c.shapeName), byCroppingWith: GameSingleton.instance.backgroundCrop(c.shapeName), duration: 0.1)
-//            scoreBoard.removeAllActions()
-//            scoreBoard.tapTutorial()
-//            leftArrow.addMarker()
-//            rightArrow.addMarker()
-//            let cc = Triangle()
-//            cc.creationDuration = 0.1
-//            cc.name = "sn_triangle"
-//            cc.create()
-//            cc.position.y = yStartPosition - (yStartPosition + abs(yEndPosition))*(2/3)
-//            cc.zPosition = ZPOS_SHAPE
-//            addChildToContainer(cc)
-//            spinner.spinn(false, delay: 0.1)
-//        } else if let c = gameSceneNodeContainer.childNodeWithName("sn_triangle") as? Shape {
-//            // Prepare for SNAPSHOT 4
-//            c.removeFromParent()
-//            gradientNode.setTexture(GameSingleton.instance.gradient(c.shapeName), byCroppingWith: GameSingleton.instance.backgroundCrop(c.shapeName), duration: 0.1)
-//            leftArrow.stopAnimating()
-//            rightArrow.stopAnimating()
-//            scoreBoard.TESTdisplayNumber(14)
-//            let cc = Pentagon()
-//            cc.creationDuration = 0.1
-//            cc.create()
-//            cc.name = "sn_pentagon"
-//            cc.position.y = yEndPosition
-//            cc.zPosition = ZPOS_SHAPE
-//            addChildToContainer(cc)
-//        } else if let c = gameSceneNodeContainer.childNodeWithName("sn_pentagon") as? Shape {
-//            // CLEANING
-//            c.removeFromParent()
-//            scoreBoard.removeScoreLabel()
-//        } else {
-//            // Prepare for SNAPSHOT 1
-//            let c = Pentagon()
-//            gradientNode.setTexture(GameSingleton.instance.gradient(c.shapeName), byCroppingWith: GameSingleton.instance.backgroundCrop(c.shapeName), duration: 0.1)
-//            let cc = Circle()
-//            cc.creationDuration = 0.1
-//            cc.create()
-//            cc.name = "sn_circle"
-//            cc.position.y = yStartPosition
-//            cc.zPosition = ZPOS_SHAPE
-//            addChildToContainer(cc)
-//            spinner.spinn(true, delay: 0.1)
-////            leftArrow.stopAnimating()
-////            rightArrow.stopAnimating()
-//            scoreBoard.removeAllActions()
-//            scoreBoard.letsGo(8, completion: {})
-//
-//        }
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let c = gameSceneNodeContainer.childNode(withName: "sn_circle") as? Shape {
+            // Prepare for SNAPSHOT 2
+            scoreBoard.removeScoreLabel()
+            c.removeFromParent()
+            gradientNode.setTexture(AppCache.instance.gradient(shape: c.shapeType), byCroppingWith: AppCache.instance.backgroundCrop(shape: c.shapeType), duration: 0.1)
+            
+            let cc = Shape(type: .square)
+            cc.creationDuration = 0.1
+            cc.create()
+            cc.name = "sn_square"
+            cc.position.y = shapeStartPositionY - (shapeStartPositionY + abs(shapeEndPositionY)) * (1/3)
+            cc.zPosition = Constant.zPosShape
+            addChildToContainer(cc)
+            spinner.spinn(false, delay: 0.1)
+            
+        } else if let c = gameSceneNodeContainer.childNode(withName: "sn_square") as? Shape {
+            // Prepare for SNAPSHOT 3
+            c.removeFromParent()
+            gradientNode.setTexture(AppCache.instance.gradient(shape: c.shapeType), byCroppingWith: AppCache.instance.backgroundCrop(shape: c.shapeType), duration: 0.1)
+            scoreBoard.removeAllActions()
+            scoreBoard.tapTutorial()
+            leftArrow.addMarker()
+            rightArrow.addMarker()
+            
+            let cc = Shape(type: .triangle)
+            cc.creationDuration = 0.1
+            cc.name = "sn_triangle"
+            cc.create()
+            cc.position.y = shapeStartPositionY - (shapeStartPositionY + abs(shapeEndPositionY)) * (2/3)
+            cc.zPosition = Constant.zPosShape
+            addChildToContainer(cc)
+            spinner.spinn(false, delay: 0.1)
+            
+        } else if let c = gameSceneNodeContainer.childNode(withName: "sn_triangle") as? Shape {
+            // Prepare for SNAPSHOT 4
+            c.removeFromParent()
+            gradientNode.setTexture(AppCache.instance.gradient(shape: c.shapeType), byCroppingWith: AppCache.instance.backgroundCrop(shape: c.shapeType), duration: 0.1)
+            leftArrow.stopAnimating()
+            rightArrow.stopAnimating()
+            scoreBoard.TESTdisplayNumber(14)
+            
+            let cc = Shape(type: .pentagon)
+            cc.creationDuration = 0.1
+            cc.create()
+            cc.name = "sn_pentagon"
+            cc.position.y = shapeEndPositionY
+            cc.zPosition = Constant.zPosShape
+            addChildToContainer(cc)
+            
+        } else if let c = gameSceneNodeContainer.childNode(withName: "sn_pentagon") as? Shape {
+            // CLEANING
+            c.removeFromParent()
+            scoreBoard.removeScoreLabel()
+            
+        } else {
+            // Prepare for SNAPSHOT 1
+            let c = Shape(type: .pentagon)
+            gradientNode.setTexture(AppCache.instance.gradient(shape: c.shapeType), byCroppingWith: AppCache.instance.backgroundCrop(shape: c.shapeType), duration: 0.1)
+            
+            let cc = Shape(type: .circle)
+            cc.creationDuration = 0.1
+            cc.create()
+            cc.name = "sn_circle"
+            cc.position.y = shapeStartPositionY
+            cc.zPosition = Constant.zPosShape
+            addChildToContainer(cc)
+            spinner.spinn(true, delay: 0.1)
+            scoreBoard.removeAllActions()
+            scoreBoard.letsGo(8, completion: {})
+
+        }
+    }
     
     #else
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
