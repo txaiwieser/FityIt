@@ -31,7 +31,7 @@ class AppCache {
     
     // MARK: Gradients and Background Shape Crops
     private var gradients: [ShapeType: SKTexture]?
-    private var backgroundCrops: [ShapeType: SKSpriteNode]?
+    private(set) var backgroundCrops: [ShapeType: SKSpriteNode]?
     
     func gradient(shape: ShapeType) -> SKTexture {
         return gradients![shape]!

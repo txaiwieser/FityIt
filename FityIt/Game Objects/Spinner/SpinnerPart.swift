@@ -9,7 +9,7 @@
 import SpriteKit
 
 class SpinnerPart: SKShapeNode {
-    private let dockingPosition: CGPoint
+    let dockingPosition: CGPoint
     private let type: ShapeType
     
     init(lenght: CGFloat, shape: ShapeType, color: SKColor) {

@@ -10,7 +10,7 @@
 import SpriteKit
 
 class GameScoreHUD: SKLabelNode {
-    private var points: Int = 0 {
+    private(set) var points: Int = 0 {
         didSet {
             self.text = String(points)
         }

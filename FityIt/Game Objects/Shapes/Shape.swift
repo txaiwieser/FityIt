@@ -9,24 +9,22 @@
 import SpriteKit
 
 class Shape: SKSpriteNode {
-    private enum Constant {
-        static let defaultSize = CGSize(width: 50, height: 50)
-        static let moveDuration: TimeInterval = 0.8
-        static let creationDuration: TimeInterval = 0.4
-        static let disappearDuration: TimeInterval = 0.2
-        static let waitToDisappearDuration: TimeInterval = 0
-        static let failureDuration: TimeInterval = 0.8
+    static let defaultSize = CGSize(width: 50, height: 50)
+    var moveDuration: TimeInterval = 0.8
+    var creationDuration: TimeInterval = 0.4
+    var disappearDuration: TimeInterval = 0.2
+    var waitToDisappearDuration: TimeInterval = 0
+    var failureDuration: TimeInterval = 0.8
+    
+    enum ActionKey {
+        static let isAboutToExplode = "isAboutToExplode"
+        static let move = "move"
     }
     
-    private enum ActionKey: String {
-        case isAboutToExplode
-        case move
-    }
-    
-    private var actived = true
-    private let shapeType: ShapeType
+    private(set) var actived = true
+    let shapeType: ShapeType
     private let shapeColors: SKColor
-    private let shapeName: String
+    let shapeName: String
     private let shapePath: UIBezierPath
 
     init(type: ShapeType) {
@@ -34,7 +32,7 @@ class Shape: SKSpriteNode {
         shapeColors = type.color()
         shapeName = type.name()
         shapePath = type.path()
-        super.init(texture: nil, color: .clear, size: Constant.defaultSize)
+        super.init(texture: nil, color: .clear, size: Shape.defaultSize)
         
         run(.setTexture(AppCache.instance.mainAtlas.textureNamed(type.textureName()), resize: true))
 
@@ -49,8 +47,9 @@ class Shape: SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func activatePhysicsBody(_ path: UIBezierPath) {
+        
+    func activatePhysicsBody() {
+        let path = shapeType.path()
         let physicsBody = SKPhysicsBody(polygonFrom: path.cgPath)
         let shapeCategory = PhysicsCategory.category(of: shapeType)
         physicsBody.categoryBitMask = shapeCategory.rawValue
@@ -71,7 +70,7 @@ class Shape: SKSpriteNode {
     func countToExplode() {
         self.run(SKAction.sequence([SKAction.wait(forDuration: 1), SKAction.run({ () -> Void in
             self.failure()
-        })]), withKey: ActionKey.isAboutToExplode.rawValue)
+        })]), withKey: ActionKey.isAboutToExplode)
     }
     
     func releaseMe() {

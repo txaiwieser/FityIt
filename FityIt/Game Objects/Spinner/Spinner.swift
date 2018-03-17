@@ -59,7 +59,7 @@ class Spinner: SKSpriteNode {
         shapeNode.zPosition = 12
     }
     
-    private func spinn(_ right: Bool, delay: Double = 0.2) {
+    func spinn(_ right: Bool, delay: Double = 0.2) {
         if let act = soundFor(right) { run(act) }
         if right { activedSection -= 1 }
         else { activedSection += 1 }
