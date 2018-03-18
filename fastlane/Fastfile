@@ -16,7 +16,8 @@ platform :ios do
   lane :screenshots do
     capture_screenshots(
     	scheme: "FityIt-Screenshots",
-    	xcargs: "OTHER_SWIFT_FLAGS=\"-D SNAPSHOT\""
+    	xcargs: "OTHER_SWIFT_FLAGS=\"-D SNAPSHOT\"",
+    	clear_previous_screenshots: true
    	)
   end
 end
