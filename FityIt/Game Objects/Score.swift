@@ -16,6 +16,6 @@ struct Score {
     }
     
     func highScorePoints() -> Int {
-        return AppPersistence.matchesPlayedSinceLaunch
+        return AppPersistence.highScorePoints
     }
 }
