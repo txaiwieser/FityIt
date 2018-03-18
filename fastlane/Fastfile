@@ -12,6 +12,13 @@
 default_platform(:ios)
 
 platform :ios do
+  desc "Push a new release build to the App Store"
+  lane :release do
+  	get_provisioning_profile
+    build_app(scheme: "FityIt")
+    upload_to_app_store
+  end
+
   desc "Generate new localized screenshots"
   lane :screenshots do
     capture_screenshots(

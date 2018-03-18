@@ -1,6 +1,8 @@
-app_identifier("com.txaiwieser.FityIt") # The bundle identifier of your app
-# apple_id("[[APPLE_ID]]") # Your Apple email address
+app_identifier("com.TDW.FityIt") # The bundle identifier of your app
+apple_id("txai.wieser@icloud.com") # Your Apple email address
 
+itc_team_id "51473801" # iTunes Connect Team ID
+team_id "99MCMQ6KGP" # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
