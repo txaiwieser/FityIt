@@ -17,6 +17,11 @@
 <a href="http://twitter.com/txaiwieser"><img src="https://img.shields.io/badge/Twitter-@txaiwieser-blue.svg?style=flat" alt="Twitter"/></a>
 </p>
 
+<p align="center">
+  <img height="300" src="readme-resources/fityIt_showcase.gif">
+  <br>
+</p>
+
 ## About
 How long can you survive in FityIt? Focus is key to achieving a high score!
 Tap left or right to spin the octagon and match the incoming shapes.
