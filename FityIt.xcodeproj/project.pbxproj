@@ -19,6 +19,8 @@
 		3325AF33205C16D2008E1174 /* SKSpriteNode+SetTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */; };
 		3325AF35205C192F008E1174 /* SKAction+TextureGlitchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF34205C192F008E1174 /* SKAction+TextureGlitchs.swift */; };
 		3325AF37205C6CB3008E1174 /* CGPoint+IsCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */; };
+		33AD4FC020B304C50034A9BA /* TWSpriteKitUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */; };
+		33AD4FC120B304C50034A9BA /* TWSpriteKitUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33B8A33720B2FCC000BDE204 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32B20B2FCC000BDE204 /* SKColor+Extensions.swift */; };
 		33B8A33820B2FCC000BDE204 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32C20B2FCC000BDE204 /* CGVector+Extensions.swift */; };
 		33B8A33920B2FCC000BDE204 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32D20B2FCC000BDE204 /* Int+Extensions.swift */; };
@@ -74,6 +76,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		33AD4FBC20B304A40034A9BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9099AC81B9F589500758069;
+			remoteInfo = TWSpriteKitUtils;
+		};
+		33AD4FBE20B304A40034A9BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9306C731BAAEF15003A900C;
+			remoteInfo = "TWSpriteKitUtils Demo";
+		};
+		33AD4FC220B304C50034A9BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9099AC71B9F589500758069;
+			remoteInfo = TWSpriteKitUtils;
+		};
 		33BC56F3205DD5430022728D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 33ECD8CD20584B3300B6AE8E /* Project object */;
@@ -90,6 +113,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				33AD4FC120B304C50034A9BA /* TWSpriteKitUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +135,7 @@
 		3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+SetTexture.swift"; sourceTree = "<group>"; };
 		3325AF34205C192F008E1174 /* SKAction+TextureGlitchs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+TextureGlitchs.swift"; sourceTree = "<group>"; };
 		3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+IsCloseTo.swift"; sourceTree = "<group>"; };
+		33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TWSpriteKitUtils.xcodeproj; path = submodules/TWSpriteKitUtils/TWSpriteKitUtils.xcodeproj; sourceTree = SOURCE_ROOT; };
 		33B8A32B20B2FCC000BDE204 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
 		33B8A32C20B2FCC000BDE204 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
 		33B8A32D20B2FCC000BDE204 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
@@ -183,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33AD4FC020B304C50034A9BA /* TWSpriteKitUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +231,15 @@
 				3325AF2A205B0C99008E1174 /* SpinnerPart.swift */,
 			);
 			path = Spinner;
+			sourceTree = "<group>";
+		};
+		33AD4FB820B304A40034A9BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */,
+				33AD4FBF20B304A40034A9BA /* TWSpriteKitUtils Demo.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		33B8A32A20B2FCC000BDE204 /* SKTUtils */ = {
@@ -390,6 +425,7 @@
 		33ECD9A62059C3A800B6AE8E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */,
 				33B8A32A20B2FCC000BDE204 /* SKTUtils */,
 				3325AF24205B079C008E1174 /* LPRFixedWidthLabelNode */,
 				33ECD9AE2059C90900B6AE8E /* UpdateTimer */,
@@ -458,6 +494,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				33AD4FC320B304C50034A9BA /* PBXTargetDependency */,
 			);
 			name = FityIt;
 			productName = FityIt;
@@ -496,6 +533,12 @@
 			mainGroup = 33ECD8CC20584B3300B6AE8E;
 			productRefGroup = 33ECD8D620584B3300B6AE8E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 33AD4FB820B304A40034A9BA /* Products */;
+					ProjectRef = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				33ECD8D420584B3300B6AE8E /* FityIt */,
@@ -503,6 +546,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TWSpriteKitUtils.framework;
+			remoteRef = 33AD4FBC20B304A40034A9BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33AD4FBF20B304A40034A9BA /* TWSpriteKitUtils Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "TWSpriteKitUtils Demo.app";
+			remoteRef = 33AD4FBE20B304A40034A9BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		33BC56EC205DD5430022728D /* Resources */ = {
@@ -603,6 +663,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		33AD4FC320B304C50034A9BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TWSpriteKitUtils;
+			targetProxy = 33AD4FC220B304C50034A9BA /* PBXContainerItemProxy */;
+		};
 		33BC56F4205DD5430022728D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 33ECD8D420584B3300B6AE8E /* FityIt */;

@@ -1,0 +1,3 @@
+[submodule "submodules/TWSpriteKitUtils"]
+	path = submodules/TWSpriteKitUtils
+	url = https://github.com/txaiwieser/TWSpriteKitUtils
