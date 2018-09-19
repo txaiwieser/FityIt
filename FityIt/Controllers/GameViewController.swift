@@ -32,7 +32,7 @@ class GameViewController: UIViewController {
         _ = SKAction.reloadSoundEffectsSettings()
         
         let overlayView = UIImageView(image: UIImage(named: "bg1"))
-        overlayView.contentMode = UIViewContentMode.scaleAspectFill
+        overlayView.contentMode = .scaleAspectFill
         overlayView.isUserInteractionEnabled = false
         overlayView.alpha = 0.13
         view.addSubview(overlayView)

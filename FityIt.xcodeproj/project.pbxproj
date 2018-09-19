@@ -172,9 +172,9 @@
 		33ECD97120597E0000B6AE8E /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		33ECD97320597F1E00B6AE8E /* ShapeType+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeType+Properties.swift"; sourceTree = "<group>"; };
 		33ECD97520597FAB00B6AE8E /* ShapeType+Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeType+Paths.swift"; sourceTree = "<group>"; };
-		33ECD9842059834800B6AE8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		33ECD9862059835B00B6AE8E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		33ECD9872059836300B6AE8E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		33ECD9842059834800B6AE8E /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		33ECD9862059835B00B6AE8E /* pt-BR */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		33ECD9872059836300B6AE8E /* pt-PT */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		33ECD988205983E600B6AE8E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33ECD98A205986C300B6AE8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Polygons.swift"; sourceTree = "<group>"; };
@@ -513,11 +513,12 @@
 				TargetAttributes = {
 					33BC56ED205DD5430022728D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 33ECD8D420584B3300B6AE8E;
 					};
 					33ECD8D420584B3300B6AE8E = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -702,7 +703,7 @@
 				OTHER_SWIFT_FLAGS = "-D SNAPSHOT";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FityIt;
 			};
@@ -721,7 +722,7 @@
 				OTHER_SWIFT_FLAGS = "-D SNAPSHOT";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FityIt;
 			};
@@ -861,7 +862,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FityIt/Supporting Files/FityIt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -884,7 +885,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDW.FityIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FityIt/Supporting Files/FityIt-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
