@@ -23,6 +23,7 @@ class SplashScreenViewController: UIViewController {
         delay(0.3) {
             let vc = AppDelegate.gameViewController
             vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
     }
