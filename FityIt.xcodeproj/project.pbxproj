@@ -513,12 +513,12 @@
 				TargetAttributes = {
 					33BC56ED205DD5430022728D = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1300;
 						TestTargetID = 33ECD8D420584B3300B6AE8E;
 					};
 					33ECD8D420584B3300B6AE8E = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -703,7 +703,7 @@
 				OTHER_SWIFT_FLAGS = "-D SNAPSHOT";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FityIt;
 			};
@@ -722,7 +722,7 @@
 				OTHER_SWIFT_FLAGS = "-D SNAPSHOT";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.txaiwieser.FityIt-Screenshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FityIt;
 			};
@@ -862,7 +862,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FityIt/Supporting Files/FityIt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -885,7 +885,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDW.FityIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FityIt/Supporting Files/FityIt-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

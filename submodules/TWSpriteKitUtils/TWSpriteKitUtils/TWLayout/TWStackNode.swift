@@ -89,7 +89,7 @@ open class TWStackNode: SKSpriteNode {
     open func remove(node: SKNode?, reload: Bool = false) {
         if let n = node {
             n.removeFromParent()
-            if let ind = subNodes.index(of: n) {
+            if let ind = subNodes.firstIndex(of: n) {
                 subNodes.remove(at: ind)
             }
         
