@@ -13,7 +13,7 @@ class ShareImageScene: SKScene {
     private let displayContent: TWStackNode!
     
     init(size: CGSize, score: Score?) {
-        displayContent = TWStackNode(lenght: size.width, fillMode: .vertical)
+        displayContent = TWStackNode(length: size.width, fillMode: .vertical)
         super.init(size: size)
         backgroundColor = .red
         

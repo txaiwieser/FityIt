@@ -88,7 +88,7 @@ public extension CGPoint {
 
   /**
    * Returns the angle in radians of the vector described by the CGPoint.
-   * The range of the angle is -π to π; an angle of 0 points to the right.
+   * The range of the angle is -.pi to .pi; an angle of 0 points to the right.
    */
   public var angle: CGFloat {
     return atan2(y, x)

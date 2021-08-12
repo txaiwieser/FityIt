@@ -21,7 +21,7 @@ enum AppPersistence {
             reportNewAchievement(points: score.points)
         }
         
-        GCHelper.sharedInstance.reportLeaderboardIdentifier(AppDefines.Constants.mainLeaderboardID, score: score.points)
+        GCHelper.shared.reportLeaderboardIdentifier(AppDefines.Constants.mainLeaderboardID, score: score.points)
     }
     
     static func resetUserDefaults() {
@@ -68,15 +68,15 @@ enum AppPersistence {
     }
     
     private static func reportNewAchievement(points: Int) {
-        GCHelper.sharedInstance.reportAchievementIdentifier("10POINTS", percent: 100 * Double(points) / 10)
-        GCHelper.sharedInstance.reportAchievementIdentifier("20POINTS", percent: 100 * Double(points) / 20)
-        GCHelper.sharedInstance.reportAchievementIdentifier("30POINTS", percent: 100 * Double(points) / 30)
-        GCHelper.sharedInstance.reportAchievementIdentifier("40POINTS", percent: 100 * Double(points) / 40)
-        GCHelper.sharedInstance.reportAchievementIdentifier("50POINTS", percent: 100 * Double(points) / 50)
-        GCHelper.sharedInstance.reportAchievementIdentifier("60POINTS", percent: 100 * Double(points) / 60)
-        GCHelper.sharedInstance.reportAchievementIdentifier("70POINTS", percent: 100 * Double(points) / 70)
-        GCHelper.sharedInstance.reportAchievementIdentifier("80POINTS", percent: 100 * Double(points) / 80)
-        GCHelper.sharedInstance.reportAchievementIdentifier("90POINTS", percent: 100 * Double(points) / 90)
-        GCHelper.sharedInstance.reportAchievementIdentifier("100POINTS", percent: 100 * Double(points) / 100)
+        GCHelper.shared.reportAchievementIdentifier("10POINTS", percent: 100 * Double(points) / 10)
+        GCHelper.shared.reportAchievementIdentifier("20POINTS", percent: 100 * Double(points) / 20)
+        GCHelper.shared.reportAchievementIdentifier("30POINTS", percent: 100 * Double(points) / 30)
+        GCHelper.shared.reportAchievementIdentifier("40POINTS", percent: 100 * Double(points) / 40)
+        GCHelper.shared.reportAchievementIdentifier("50POINTS", percent: 100 * Double(points) / 50)
+        GCHelper.shared.reportAchievementIdentifier("60POINTS", percent: 100 * Double(points) / 60)
+        GCHelper.shared.reportAchievementIdentifier("70POINTS", percent: 100 * Double(points) / 70)
+        GCHelper.shared.reportAchievementIdentifier("80POINTS", percent: 100 * Double(points) / 80)
+        GCHelper.shared.reportAchievementIdentifier("90POINTS", percent: 100 * Double(points) / 90)
+        GCHelper.shared.reportAchievementIdentifier("100POINTS", percent: 100 * Double(points) / 100)
     }
 }

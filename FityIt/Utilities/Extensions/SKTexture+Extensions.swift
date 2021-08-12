@@ -18,8 +18,8 @@ extension SKTexture {
     convenience init(circleOfRadius radius: CGFloat, color: SKColor) {
         self.init(image: UIImage.circle(withRadius: radius, color: color))
     }
-    convenience init(squareOfLenght lenght: CGFloat, color: UIColor) {
-        self.init(image: UIImage.square(withLenght: lenght, color: color))
+    convenience init(squareOflength length: CGFloat, color: UIColor) {
+        self.init(image: UIImage.square(withlength: length, color: color))
     }
     convenience init(pentagonWithWidth width: CGFloat, color: UIColor) {
         self.init(image: UIImage.pentagon(withWidth: width, color: color))

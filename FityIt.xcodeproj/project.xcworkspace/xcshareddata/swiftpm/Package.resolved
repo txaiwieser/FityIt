@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TWSpriteKitUtils",
+        "repositoryURL": "https://github.com/txaiwieser/TWSpriteKitUtils",
+        "state": {
+          "branch": null,
+          "revision": "e5f5cd49ae903a8dd3892e383cfd992f12cfe497",
+          "version": "2.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

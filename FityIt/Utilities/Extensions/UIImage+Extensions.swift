@@ -21,8 +21,8 @@ extension UIImage {
         }
     }
     
-    static func square(withLenght lenght: CGFloat, color: UIColor) -> UIImage {
-        let size = CGSize(width: lenght + 2, height: lenght + 2)
+    static func square(withlength length: CGFloat, color: UIColor) -> UIImage {
+        let size = CGSize(width: length + 2, height: length + 2)
         
         return UIGraphicsImageRenderer(size: size).image { rendererContext in
             let context = rendererContext.cgContext

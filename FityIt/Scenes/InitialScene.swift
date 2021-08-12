@@ -12,7 +12,7 @@ import StoreKit
 
 class InitialScene: SKScene {
     private var animationApear: (() -> Void)? = nil
-    private var animationDisapear: (() -> Void)? = nil
+    private var animationDisappear: (() -> Void)? = nil
     
     var gameScene: GameScene?
     private var score: Score?
@@ -39,14 +39,14 @@ class InitialScene: SKScene {
     
     override func willMove(from view: SKView) {
         super.willMove(from: view)
-        animationDisapear?()
+        animationDisappear?()
     }
     
     init(score: Score?) {
         self.score = score
         let newSize = InitialScene.calculateSceneSize()
         super.init(size: newSize)
-        GCHelper.sharedInstance.authenticateLocalUser()
+        GCHelper.shared.authenticateLocalUser()
         
         if let score = score { AppPersistence.saveNewScore(score) }
         
@@ -84,7 +84,7 @@ class InitialScene: SKScene {
         squaresStack.add(node: rateButton)
         squaresStack.reloadStack()
         
-        let bottomStack = TWStackNode(lenght: deviceSize.width, fillMode: .vertical)
+        let bottomStack = TWStackNode(length: deviceSize.width, fillMode: .vertical)
         bottomStack.add(node: circlesStack)
         bottomStack.add(node: margin)
         bottomStack.add(node: squaresStack)
@@ -102,7 +102,7 @@ class InitialScene: SKScene {
         scoreContainer.alpha = 0
         scoreContainer.setScore(self.score ?? Score(points: 0))
         
-        let topStack = TWStackNode(lenght: newSize.width, fillMode: .vertical)
+        let topStack = TWStackNode(length: newSize.width, fillMode: .vertical)
         topStack.position = CGPoint(x: newSize.width/2, y: newSize.height/2)
         topStack.position.y += newSize.height/4 - multiplier/2
         topStack.zPosition = 400
@@ -140,7 +140,7 @@ class InitialScene: SKScene {
             }
         }
         
-        animationDisapear = { [weak self] in
+        animationDisappear = { [weak self] in
             if let strongSelf = self {
                 let end1 = bottomStack.position - CGPoint(x: 0 , y: 2 * strongSelf.convert(.zero, from: bottomStack).y)
                 let ef1 = SKTMoveEffect(node: bottomStack, duration: 0.2, startPosition: bottomStack.position, endPosition: end1)
@@ -176,9 +176,13 @@ class InitialScene: SKScene {
             AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toGame)
         }
         
-        if let animation = animationDisapear {
+        if let animation = animationDisappear {
             animation()
-            afterDelay(0.36) { present() }
+            run(
+                .afterDelay(0.36) {
+                    present()
+                }
+            )
         } else {
             present()
         }
@@ -223,7 +227,7 @@ class InitialScene: SKScene {
         
         bt.addClosure(.touchUpInside, target: self, closure: { (target, sender) -> () in
             let sc = target.score
-            GCHelper.sharedInstance.showGameCenter(AppDelegate.gameViewController, viewState: .leaderboards)
+            GCHelper.shared.showGameCenter(AppDelegate.gameViewController, viewState: .leaderboards)
         })
         return bt
     }()

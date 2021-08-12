@@ -58,7 +58,7 @@ class AppCache {
             let outerRadius = sqrt(pow(outerRadiusSize.width/2, 2) + pow(outerRadiusSize.height/2, 2))
             let circle = SKTexture(circleOfRadius: outerRadius, color: .white)
             let triangle = SKTexture(triangleWithSize: CGSize(width: (2 * adjustedSize.height) * 8/9, height: 2 * adjustedSize.height), color: .white)
-            let square = SKTexture(squareOfLenght: 2 * adjustedSize.height, color: .white)
+            let square = SKTexture(squareOflength: 2 * adjustedSize.height, color: .white)
             let pentagon = SKTexture(pentagonWithWidth: 4 * adjustedSize.width, color: .white)
             
             backgroundCrops =  [.circle: SKSpriteNode(texture: circle),

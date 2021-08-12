@@ -30,11 +30,11 @@ extension UIBezierPath {
         let sidesCount: Int = 5
         let sides = CGFloat(sidesCount)
         
-        let lenght = width * sqrt((sides - sqrt(sides)) / 10)
+        let length = width * sqrt((sides - sqrt(sides)) / 10)
         
         for i in 0..<sidesCount {
             let angle: CGFloat = CGFloat(i) * ((2 * .pi) / sides) - (.pi / 2)
-            let point = CGPoint(x: lenght * cos(angle), y: -lenght * sin(angle) + 2 * ((width / 2) - lenght))
+            let point = CGPoint(x: length * cos(angle), y: -length * sin(angle) + 2 * ((width / 2) - length))
             
             if i == 0 { move(to: point) }
             else { addLine(to: point) }

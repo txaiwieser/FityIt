@@ -12,12 +12,12 @@ class SpinnerPart: SKShapeNode {
     let dockingPosition: CGPoint
     private let type: ShapeType
     
-    init(lenght: CGFloat, shape: ShapeType, color: SKColor) {
+    init(length: CGFloat, shape: ShapeType, color: SKColor) {
         type = shape
-        dockingPosition = (shape == .triangle ? CGPoint(x: 0, y: lenght / 2 - 8) : CGPoint(x: 0, y: lenght / 2))
+        dockingPosition = (shape == .triangle ? CGPoint(x: 0, y: length / 2 - 8) : CGPoint(x: 0, y: length / 2))
         super.init()
         
-        let shapePath = shape.spinnerPath(size: CGSize(width: 2 * lenght / (1 + sqrt(2)), height: lenght))
+        let shapePath = shape.spinnerPath(size: CGSize(width: 2 * length / (1 + sqrt(2)), height: length))
         activatePhysicsBody(shapePath)
         
         if BUILD_MODE == .debug {

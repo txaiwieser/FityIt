@@ -8,23 +8,21 @@
 
 import SpriteKit
 
-enum ShapeType {
+enum ShapeType: CaseIterable, Equatable {
     case circle
     case square
     case triangle
     case pentagon
     
-    static let allCases: [ShapeType] = [.circle, .square, .triangle, .pentagon]
-    
-    static var lastRandomShapeIndex: Int = 0
+    static var lastRandomShapeType: ShapeType?
     static func randomShape() -> Shape {
-        var i = 0
+        var type: ShapeType
         repeat {
-            i = Int.random(allCases.count)
-        } while i == lastRandomShapeIndex
+            type = allCases.randomElement()!
+        } while type == lastRandomShapeType
         
-        lastRandomShapeIndex = i
-        return Shape(type: allCases[i])
+        lastRandomShapeType = type
+        return Shape(type: type)
     }
 }
 

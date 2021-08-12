@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,20 +19,12 @@
 		3325AF33205C16D2008E1174 /* SKSpriteNode+SetTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */; };
 		3325AF35205C192F008E1174 /* SKAction+TextureGlitchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF34205C192F008E1174 /* SKAction+TextureGlitchs.swift */; };
 		3325AF37205C6CB3008E1174 /* CGPoint+IsCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */; };
-		33AD4FC020B304C50034A9BA /* TWSpriteKitUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */; };
-		33AD4FC120B304C50034A9BA /* TWSpriteKitUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		33B8A33720B2FCC000BDE204 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32B20B2FCC000BDE204 /* SKColor+Extensions.swift */; };
-		33B8A33820B2FCC000BDE204 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32C20B2FCC000BDE204 /* CGVector+Extensions.swift */; };
-		33B8A33920B2FCC000BDE204 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32D20B2FCC000BDE204 /* Int+Extensions.swift */; };
+		3338364A26C495AB006CD86F /* TWSpriteKitUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 3338364926C495AB006CD86F /* TWSpriteKitUtils */; };
 		33B8A33A20B2FCC000BDE204 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32E20B2FCC000BDE204 /* SKTTimingFunctions.swift */; };
 		33B8A33B20B2FCC000BDE204 /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A32F20B2FCC000BDE204 /* SKAction+Extensions.swift */; };
 		33B8A33C20B2FCC000BDE204 /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A33020B2FCC000BDE204 /* SKAction+SpecialEffects.swift */; };
-		33B8A33D20B2FCC000BDE204 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A33120B2FCC000BDE204 /* SKNode+Extensions.swift */; };
 		33B8A33E20B2FCC000BDE204 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A33220B2FCC000BDE204 /* CGPoint+Extensions.swift */; };
 		33B8A33F20B2FCC000BDE204 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A33320B2FCC000BDE204 /* SKTEffects.swift */; };
-		33B8A34020B2FCC000BDE204 /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A33420B2FCC000BDE204 /* SKTAudio.swift */; };
-		33B8A34120B2FCC000BDE204 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A33520B2FCC000BDE204 /* Vector3.swift */; };
-		33B8A34220B2FCC000BDE204 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A33620B2FCC000BDE204 /* CGFloat+Extensions.swift */; };
 		33B8A34520B3027600BDE204 /* Numbers+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8A34420B3027600BDE204 /* Numbers+Random.swift */; };
 		33BC56F1205DD5430022728D /* FityIt_Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BC56F0205DD5430022728D /* FityIt_Screenshots.swift */; };
 		33BC56FA205DD5AA0022728D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BC56F9205DD5AA0022728D /* SnapshotHelper.swift */; };
@@ -76,27 +68,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		33AD4FBC20B304A40034A9BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9099AC81B9F589500758069;
-			remoteInfo = TWSpriteKitUtils;
-		};
-		33AD4FBE20B304A40034A9BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9306C731BAAEF15003A900C;
-			remoteInfo = "TWSpriteKitUtils Demo";
-		};
-		33AD4FC220B304C50034A9BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E9099AC71B9F589500758069;
-			remoteInfo = TWSpriteKitUtils;
-		};
 		33BC56F3205DD5430022728D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 33ECD8CD20584B3300B6AE8E /* Project object */;
@@ -113,7 +84,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				33AD4FC120B304C50034A9BA /* TWSpriteKitUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,19 +105,11 @@
 		3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+SetTexture.swift"; sourceTree = "<group>"; };
 		3325AF34205C192F008E1174 /* SKAction+TextureGlitchs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+TextureGlitchs.swift"; sourceTree = "<group>"; };
 		3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+IsCloseTo.swift"; sourceTree = "<group>"; };
-		33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TWSpriteKitUtils.xcodeproj; path = submodules/TWSpriteKitUtils/TWSpriteKitUtils.xcodeproj; sourceTree = SOURCE_ROOT; };
-		33B8A32B20B2FCC000BDE204 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
-		33B8A32C20B2FCC000BDE204 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
-		33B8A32D20B2FCC000BDE204 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		33B8A32E20B2FCC000BDE204 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		33B8A32F20B2FCC000BDE204 /* SKAction+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Extensions.swift"; sourceTree = "<group>"; };
 		33B8A33020B2FCC000BDE204 /* SKAction+SpecialEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+SpecialEffects.swift"; sourceTree = "<group>"; };
-		33B8A33120B2FCC000BDE204 /* SKNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
 		33B8A33220B2FCC000BDE204 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		33B8A33320B2FCC000BDE204 /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
-		33B8A33420B2FCC000BDE204 /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
-		33B8A33520B2FCC000BDE204 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
-		33B8A33620B2FCC000BDE204 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		33B8A34420B3027600BDE204 /* Numbers+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numbers+Random.swift"; sourceTree = "<group>"; };
 		33BC56EE205DD5430022728D /* FityIt-Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FityIt-Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33BC56F0205DD5430022728D /* FityIt_Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FityIt_Screenshots.swift; sourceTree = "<group>"; };
@@ -208,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33AD4FC020B304C50034A9BA /* TWSpriteKitUtils.framework in Frameworks */,
+				3338364A26C495AB006CD86F /* TWSpriteKitUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,30 +195,13 @@
 			path = Spinner;
 			sourceTree = "<group>";
 		};
-		33AD4FB820B304A40034A9BA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */,
-				33AD4FBF20B304A40034A9BA /* TWSpriteKitUtils Demo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		33B8A32A20B2FCC000BDE204 /* SKTUtils */ = {
 			isa = PBXGroup;
 			children = (
-				33B8A32B20B2FCC000BDE204 /* SKColor+Extensions.swift */,
-				33B8A32C20B2FCC000BDE204 /* CGVector+Extensions.swift */,
-				33B8A32D20B2FCC000BDE204 /* Int+Extensions.swift */,
 				33B8A32E20B2FCC000BDE204 /* SKTTimingFunctions.swift */,
-				33B8A32F20B2FCC000BDE204 /* SKAction+Extensions.swift */,
 				33B8A33020B2FCC000BDE204 /* SKAction+SpecialEffects.swift */,
-				33B8A33120B2FCC000BDE204 /* SKNode+Extensions.swift */,
 				33B8A33220B2FCC000BDE204 /* CGPoint+Extensions.swift */,
 				33B8A33320B2FCC000BDE204 /* SKTEffects.swift */,
-				33B8A33420B2FCC000BDE204 /* SKTAudio.swift */,
-				33B8A33520B2FCC000BDE204 /* Vector3.swift */,
-				33B8A33620B2FCC000BDE204 /* CGFloat+Extensions.swift */,
 			);
 			path = SKTUtils;
 			sourceTree = "<group>";
@@ -397,6 +342,7 @@
 				3325AEFF2059DE40008E1174 /* SKAction+AppearDisappear.swift */,
 				3325AF1E205B0393008E1174 /* UIView+AsImage.swift */,
 				3325AF32205C16D2008E1174 /* SKSpriteNode+SetTexture.swift */,
+				33B8A32F20B2FCC000BDE204 /* SKAction+Extensions.swift */,
 				3325AF34205C192F008E1174 /* SKAction+TextureGlitchs.swift */,
 			);
 			path = Extensions;
@@ -425,7 +371,6 @@
 		33ECD9A62059C3A800B6AE8E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */,
 				33B8A32A20B2FCC000BDE204 /* SKTUtils */,
 				3325AF24205B079C008E1174 /* LPRFixedWidthLabelNode */,
 				33ECD9AE2059C90900B6AE8E /* UpdateTimer */,
@@ -494,9 +439,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				33AD4FC320B304C50034A9BA /* PBXTargetDependency */,
 			);
 			name = FityIt;
+			packageProductDependencies = (
+				3338364926C495AB006CD86F /* TWSpriteKitUtils */,
+			);
 			productName = FityIt;
 			productReference = 33ECD8D520584B3300B6AE8E /* FityIt.app */;
 			productType = "com.apple.product-type.application";
@@ -532,14 +479,11 @@
 				"pt-PT",
 			);
 			mainGroup = 33ECD8CC20584B3300B6AE8E;
+			packageReferences = (
+				3338364826C495AB006CD86F /* XCRemoteSwiftPackageReference "TWSpriteKitUtils" */,
+			);
 			productRefGroup = 33ECD8D620584B3300B6AE8E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 33AD4FB820B304A40034A9BA /* Products */;
-					ProjectRef = 33AD4FB720B304A40034A9BA /* TWSpriteKitUtils.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				33ECD8D420584B3300B6AE8E /* FityIt */,
@@ -547,23 +491,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		33AD4FBD20B304A40034A9BA /* TWSpriteKitUtils.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TWSpriteKitUtils.framework;
-			remoteRef = 33AD4FBC20B304A40034A9BA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		33AD4FBF20B304A40034A9BA /* TWSpriteKitUtils Demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "TWSpriteKitUtils Demo.app";
-			remoteRef = 33AD4FBE20B304A40034A9BA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		33BC56EC205DD5430022728D /* Resources */ = {
@@ -611,11 +538,9 @@
 			files = (
 				33ECD97420597F1E00B6AE8E /* ShapeType+Properties.swift in Sources */,
 				33ECD96A20585CF200B6AE8E /* AppDelegate.swift in Sources */,
-				33B8A33D20B2FCC000BDE204 /* SKNode+Extensions.swift in Sources */,
 				33ECD99A2059A33A00B6AE8E /* AppCache.swift in Sources */,
 				33ECD9A32059BF5500B6AE8E /* InitialScene.swift in Sources */,
 				33B8A33C20B2FCC000BDE204 /* SKAction+SpecialEffects.swift in Sources */,
-				33B8A34220B2FCC000BDE204 /* CGFloat+Extensions.swift in Sources */,
 				3325AF37205C6CB3008E1174 /* CGPoint+IsCloseTo.swift in Sources */,
 				33ECD96C20585E6B00B6AE8E /* PhysicsCategory.swift in Sources */,
 				33ECD99C2059B0D900B6AE8E /* SKTexture+Extensions.swift in Sources */,
@@ -634,14 +559,11 @@
 				3325AF28205B0B6B008E1174 /* GameGesturesHUD.swift in Sources */,
 				33B8A33B20B2FCC000BDE204 /* SKAction+Extensions.swift in Sources */,
 				33ECD9622058546100B6AE8E /* Shape.swift in Sources */,
-				33B8A33820B2FCC000BDE204 /* CGVector+Extensions.swift in Sources */,
 				3325AF1D205B02E6008E1174 /* ShareImageScene.swift in Sources */,
 				3325AF002059DE40008E1174 /* SKAction+AppearDisappear.swift in Sources */,
-				33B8A34120B2FCC000BDE204 /* Vector3.swift in Sources */,
 				33B8A33F20B2FCC000BDE204 /* SKTEffects.swift in Sources */,
 				33ECD97620597FAB00B6AE8E /* ShapeType+Paths.swift in Sources */,
 				33ECD9B72059D36B00B6AE8E /* ScoreContainer.swift in Sources */,
-				33B8A33720B2FCC000BDE204 /* SKColor+Extensions.swift in Sources */,
 				3325AF2D205B1407008E1174 /* Spinner.swift in Sources */,
 				33ECD9B02059C90A00B6AE8E /* UpdateTimer.swift in Sources */,
 				3325AF23205B078E008E1174 /* LPRFixedWidthLabelNode.m in Sources */,
@@ -650,12 +572,10 @@
 				33ECD9A92059C42500B6AE8E /* GCHelper.swift in Sources */,
 				33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */,
 				3325AF2B205B0C99008E1174 /* SpinnerPart.swift in Sources */,
-				33B8A33920B2FCC000BDE204 /* Int+Extensions.swift in Sources */,
 				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
 				33ECD95C2058546100B6AE8E /* ShapeType.swift in Sources */,
 				33ECD9AD2059C5E500B6AE8E /* Score.swift in Sources */,
 				33ECD9B22059CB4800B6AE8E /* SKAction+SoundEffects.swift in Sources */,
-				33B8A34020B2FCC000BDE204 /* SKTAudio.swift in Sources */,
 				3325AF1F205B0393008E1174 /* UIView+AsImage.swift in Sources */,
 				33ECD99E2059B10500B6AE8E /* UIImage+Extensions.swift in Sources */,
 			);
@@ -664,11 +584,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		33AD4FC320B304C50034A9BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TWSpriteKitUtils;
-			targetProxy = 33AD4FC220B304C50034A9BA /* PBXContainerItemProxy */;
-		};
 		33BC56F4205DD5430022728D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 33ECD8D420584B3300B6AE8E /* FityIt */;
@@ -923,6 +838,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3338364826C495AB006CD86F /* XCRemoteSwiftPackageReference "TWSpriteKitUtils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/txaiwieser/TWSpriteKitUtils";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3338364926C495AB006CD86F /* TWSpriteKitUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3338364826C495AB006CD86F /* XCRemoteSwiftPackageReference "TWSpriteKitUtils" */;
+			productName = TWSpriteKitUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33ECD8CD20584B3300B6AE8E /* Project object */;
 }

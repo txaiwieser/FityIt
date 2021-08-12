@@ -34,7 +34,7 @@ class Spinner: SKSpriteNode {
             let radius = frameSide / 2
             let rotation =  CGFloat(i) * section
             
-            let node = SpinnerPart(lenght: frameSide, shape: shape, color: .clear)
+            let node = SpinnerPart(length: frameSide, shape: shape, color: .clear)
             node.zRotation =  CGFloat(sectionsCount - i) * section
             node.position = CGPoint(x: radius * sin(rotation), y: radius * cos(rotation))
             node.zPosition = 10

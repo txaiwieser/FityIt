@@ -21,7 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private let gradientNode: SKSpriteNode
     
     private var animationApear: (() -> Void)? = nil
-    private var animationDisapear: (() -> Void)? = nil
+    private var animationDisappear: (() -> Void)? = nil
     
     private var firstShape:Bool = true
     private var gameEndedDoOnce = false
@@ -76,7 +76,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     init(isEndlessGame: Bool = false) {
-        ShapeType.lastRandomShapeIndex = 0
+        ShapeType.lastRandomShapeType = nil
         let newSize = GameScene.calculateSceneSize()
         self.isEndlessGame = isEndlessGame
         self.gradientNode = SKSpriteNode(texture: AppCache.instance.gradient(shape: .circle), size: newSize)
@@ -150,7 +150,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        animationDisapear = { [weak self] in
+        animationDisappear = { [weak self] in
             if let strongSelf = self {
                 var end: CGPoint = CGPoint(x: 0, y: strongSelf.spinner.position.y - strongSelf.spinner.size.height)
 
@@ -181,9 +181,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
         }
         
-        if let anim = animationDisapear {
+        if let anim = animationDisappear {
             anim()
-            afterDelay(0.36) { present() }
+            run(
+                .afterDelay(0.36) {
+                    present()
+                }
+            )
         } else {
             present()
         }
@@ -193,9 +197,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         super.didMove(to: view)
         animationApear?()
 
-        afterDelay(0.8) {
-            AppCache.instance.backgroundCrops?.forEach { $0.1.removeFromParent() }
-        }
+        run(
+            .afterDelay(0.8) {
+                AppCache.instance.backgroundCrops?.forEach { $0.1.removeFromParent() }
+            }
+        )
     }
 
     private func addChildToContainer(_ node: SKNode) {
@@ -319,14 +325,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let moveDiv: TimeInterval = 0.6
         let creationDiv: TimeInterval = (1 - moveDiv) * 0.6
         let disappearDiv: TimeInterval = (1 - moveDiv - creationDiv) * 0.9
-        let waitToDisapearDiv: TimeInterval = 1 - moveDiv - creationDiv - disappearDiv
+        let waitToDisappearDiv: TimeInterval = 1 - moveDiv - creationDiv - disappearDiv
         
         let delay = GameTiming.delayBetweenLaunches(scoreBoard.points)
         
         node.moveDuration = moveDiv * delay
         node.creationDuration = creationDiv * delay
         node.disappearDuration = disappearDiv * delay
-        node.waitToDisappearDuration = waitToDisapearDiv * delay
+        node.waitToDisappearDuration = waitToDisappearDiv * delay
         
         
         node.create() { [weak self] in
