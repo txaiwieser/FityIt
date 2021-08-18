@@ -12,7 +12,7 @@ class SplashScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GCHelper.shared.authenticateLocalUser()
+        GameCenter.shared.authenticateLocalUser()
     }
     
     override func viewDidAppear(_ animated: Bool) {

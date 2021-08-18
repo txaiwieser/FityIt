@@ -25,15 +25,14 @@ class InitialScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         animationApear?()
-        defer {
-            if gameScene == nil {
-                AppCache.instance.initializeGameTextures(with: GameScene.calculateSceneSize(view.frame.size))
-                gameScene = GameScene()
-            }
-            
-            if AppPersistence.highScorePoints > 10 && AppPersistence.matchesPlayedSinceLaunch > 6 {
-                SKStoreReviewController.requestReview()
-            }
+        
+        if gameScene == nil {
+            AppCache.instance.initializeGameTextures(with: GameScene.calculateSceneSize(view.frame.size))
+            gameScene = GameScene()
+        }
+        
+        if AppPersistence.highScorePoints > 10 && AppPersistence.matchesPlayedSinceLaunch > 6 {
+            SKStoreReviewController.requestReview()
         }
     }
     
@@ -46,7 +45,7 @@ class InitialScene: SKScene {
         self.score = score
         let newSize = InitialScene.calculateSceneSize()
         super.init(size: newSize)
-        GCHelper.shared.authenticateLocalUser()
+        GameCenter.shared.authenticateLocalUser()
         
         if let score = score { AppPersistence.saveNewScore(score) }
         
@@ -68,50 +67,61 @@ class InitialScene: SKScene {
         addChild(gradientNode2)
         
         let isiPad = UIDevice.current.userInterfaceIdiom == .pad
-        let iPadSize = CGSize(width: 326, height: 54)
-        let iPhoneSize = CGSize(width: 216, height: 30)
-        let deviceSize = (isiPad ? iPadSize : iPhoneSize)
-        let margin = SKSpriteNode(color: .clear, size: deviceSize)
+        let spacing: CGFloat = isiPad ? 24 : 12
         
-        let circlesStack = TWStackNode(size: deviceSize, fillMode: .horizontal)
-        circlesStack.add(node: playButton)
-        circlesStack.add(node: shareButton)
-        circlesStack.reloadStack()
+        let circlesStack = TWStackNode(
+            fillMode: .horizontal,
+            sizingMode: .dynamic(spacing: spacing),
+            childNodes: [
+                playButton,
+                shareButton
+            ]
+        )
         
-        let squaresStack = TWStackNode(size: deviceSize, fillMode: .horizontal)
-        squaresStack.add(node: leaderboardButton)
-        squaresStack.add(node: soundButton)
-        squaresStack.add(node: rateButton)
-        squaresStack.reloadStack()
+        let squaresStack = TWStackNode(
+            fillMode: .horizontal,
+            sizingMode: .dynamic(spacing: spacing),
+            childNodes: [
+                leaderboardButton,
+                soundButton,
+                rateButton
+            ]
+        )
         
-        let bottomStack = TWStackNode(length: deviceSize.width, fillMode: .vertical)
-        bottomStack.add(node: circlesStack)
-        bottomStack.add(node: margin)
-        bottomStack.add(node: squaresStack)
-        bottomStack.add(node: margin.copy() as! SKNode)
-        bottomStack.add(node: margin.copy() as! SKNode)
-        if AppDefines.Constants.isiPhoneX { bottomStack.add(node: margin.copy() as! SKNode) }
-        bottomStack.reloadStack()
-        
-        bottomStack.position = CGPoint(x: newSize.width/2, y: bottomStack.size.height/2)
+        let bottomStack = TWStackNode(
+            fillMode: .vertical,
+            sizingMode: .dynamic(spacing: 2 * spacing),
+            childNodes: [
+                circlesStack,
+                squaresStack
+            ]
+        )
+
+        bottomStack.position = CGPoint(x: newSize.width/2, y: newSize.height / 4)
         bottomStack.zPosition = 1000
         addChild(bottomStack)
-        
         
         let multiplier: CGFloat = isiPad ? 30 : 20
         scoreContainer.alpha = 0
         scoreContainer.setScore(self.score ?? Score(points: 0))
         
-        let topStack = TWStackNode(length: newSize.width, fillMode: .vertical)
+        let topStack = TWStackNode(
+            fillMode: .vertical,
+            sizingMode: .dynamic(spacing: nil)
+        )
+        topStack.size.width = newSize.width
         topStack.position = CGPoint(x: newSize.width/2, y: newSize.height/2)
         topStack.position.y += newSize.height/4 - multiplier/2
         topStack.zPosition = 400
-        topStack.add(node: bannerLogo)
-        topStack.add(node: scoreContainer)
+        topStack.add(node: bannerLogo, reload: false)
+        topStack.add(node: scoreContainer, reload: false)
         topStack.reloadStack()
         addChild(topStack)
         
-        tutorialButton.position = CGPoint(x: newSize.width - tutorialButton.size.width/2, y: newSize.height - tutorialButton.size.height/2)
+        tutorialButton.position = CGPoint(
+            x: newSize.width - 20,
+            y: newSize.height - 40
+        )
         tutorialButton.zPosition = 500
         tutorialButton.alpha = 0
         addChild(tutorialButton)
@@ -164,11 +174,7 @@ class InitialScene: SKScene {
     }
     
     static func calculateSceneSize(_ size: CGSize? = nil) -> CGSize {
-        let size = size ?? AppDelegate.gameViewController.gameView.frame.size
-
-        let defaultHeight: CGFloat = (AppDefines.Constants.isiPad ? 1024 : (AppDefines.Constants.isiPhoneX ? 800 : 640))
-        let const = defaultHeight / size.height
-        return CGSize(width: const * size.width, height: defaultHeight)
+        return size ?? AppDelegate.gameViewController.gameView.frame.size
     }
     
     private func removeUIandPresentScene(_ scene:SKScene) {
@@ -194,52 +200,60 @@ class InitialScene: SKScene {
     private lazy var scoreContainer: ScoreContainer = ScoreContainer(texture: AppCache.instance.interfaceAtlas.textureNamed("score_container"))
     
     private lazy var playButton: TWButton = {
-        let bt = TWButton(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_play_n"),
-                          highlightedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_play_h"))
+        let bt = TWButton(
+            normal: AppCache.instance.interfaceAtlas.textureNamed("bt_play_n"),
+            highlighted: AppCache.instance.interfaceAtlas.textureNamed("bt_play_h")
+        )
         
-        bt.addClosure(.touchUpInside, target: self, closure: { (currentScene, sender) -> () in
-            let scene = currentScene.gameScene ?? GameScene()
-            currentScene.removeUIandPresentScene(scene)
-        })
+        bt.addClosure(.touchUpInside) { [unowned self] _ in
+            let scene = gameScene ?? GameScene()
+            removeUIandPresentScene(scene)
+        }
         return bt
     }()
     
     private lazy var tutorialButton: TWButton = {
-        let bt = TWButton(size: CGSize(width: 52, height: 52), normalColor: .clear, highlightedColor: nil)
-        bt.setNormalStateLabelText("?")
-        bt.setHighlightedStateSingleLabelText("?")
-        bt.setAllStatesLabelFontName(AppDefines.FontName.defaultLight)
-        bt.setAllStatesLabelFontSize(24)
-        bt.setHighlightedStateSingleLabelFontColor(SKColor.white.withAlphaComponent(0.7))
+        let normalLabel = SKLabelNode(text: "?")
+        normalLabel.fontName = AppDefines.FontName.defaultLight
+        normalLabel.fontSize = 30
+        normalLabel.fontColor = .white
         
-        bt.addClosure(.touchUpInside, target: self, closure: { (currentScene, sender) -> () in
-            let sc = currentScene.score
+        let highlightedLabel = SKLabelNode(text: "?")
+        highlightedLabel.fontName = AppDefines.FontName.defaultLight
+        highlightedLabel.fontSize = 30
+        highlightedLabel.fontColor = .white.withAlphaComponent(0.7)
+        
+        let bt = TWButton(normal: normalLabel, highlighted: highlightedLabel)
+        
+        bt.addClosure(.touchUpInside) { [unowned self] _ in
             AppPersistence.alreadyPlayTutorial = false
-            let scene = GameScene()
-            currentScene.removeUIandPresentScene(scene)
-        })
+            removeUIandPresentScene(GameScene())
+        }
         return bt
     }()
     
     private lazy var leaderboardButton: TWButton = {
-        let bt = TWButton(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_leaderboard_n"),
-                          highlightedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_leaderboard_h"))
+        let bt = TWButton(
+            normal: AppCache.instance.interfaceAtlas.textureNamed("bt_leaderboard_n"),
+            highlighted: AppCache.instance.interfaceAtlas.textureNamed("bt_leaderboard_h")
+        )
         
-        bt.addClosure(.touchUpInside, target: self, closure: { (target, sender) -> () in
-            let sc = target.score
-            GCHelper.shared.showGameCenter(AppDelegate.gameViewController, viewState: .leaderboards)
-        })
+        bt.addClosure(.touchUpInside) { _ in
+            GameCenter.shared.showGameCenter(AppDelegate.gameViewController, viewState: .leaderboards)
+        }
         return bt
     }()
     
     private lazy var shareButton: TWButton = {
-        let bt = TWButton(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_share_n"),
-                          highlightedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_share_h"))
+        let bt = TWButton(
+            normal: AppCache.instance.interfaceAtlas.textureNamed("bt_share_n"),
+            highlighted: AppCache.instance.interfaceAtlas.textureNamed("bt_share_h")
+        )
         
-        bt.addClosure(.touchUpInside, target: self, closure: { (currentScene, sender) -> () in
+        bt.addClosure(.touchUpInside) { [unowned self] _ in
             var objectsToShare: [Any] = []
             
-            if let score = currentScene.score {
+            if let score = score {
                 let pointsMessage = (score.points == 1 ? "SHARE_MESSAGE_COMPLETE_POINT" : "SHARE_MESSAGE_COMPLETE_POINTS")
                 let textToShare = String(format:NSLocalizedString("SHARE_MESSAGE_COMPLETE", comment: ""), score.points, NSLocalizedString(pointsMessage, comment: ""), score.highScorePoints())
                 objectsToShare.append(textToShare)
@@ -258,7 +272,7 @@ class InitialScene: SKScene {
             shareImageOverlayView.alpha = 0.16
             shareImageView.addSubview(shareImageOverlayView)
             
-            let shareImageScene = ShareImageScene(size: shareImageSize, score: currentScene.score)
+            let shareImageScene = ShareImageScene(size: shareImageSize, score: score)
             shareImageView.presentScene(shareImageScene)
             if let shareImage = shareImageView.asImage(.current) {
                 objectsToShare.append(shareImage)
@@ -273,20 +287,18 @@ class InitialScene: SKScene {
             activityVC.popoverPresentationController?.sourceRect = CGRect(origin: CGPoint(x: gameView.frame.size.width/2, y: gameView.frame.size.height/2), size: .zero)
             activityVC.popoverPresentationController?.permittedArrowDirections = .up
             
-            defer {
-                AppDelegate.gameViewController.present(activityVC, animated: true, completion: nil)
-            }
-        })
+            AppDelegate.gameViewController.present(activityVC, animated: true, completion: nil)
+        }
         return bt
     }()
     
     private lazy var rateButton: TWButton = {
-        let bt = TWButton(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_rate_n"),
-                          highlightedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_rate_h"))
+        let bt = TWButton(
+            normal: AppCache.instance.interfaceAtlas.textureNamed("bt_rate_n"),
+            highlighted: AppCache.instance.interfaceAtlas.textureNamed("bt_rate_h")
+        )
         
-        bt.addClosure(.touchUpInside, target: self, closure: { (target, sender) -> () in
-            let sc = target.score
-            
+        bt.addClosure(.touchUpInside) { _ in
             let alert = UIAlertController(title: NSLocalizedString("RATE_ALERT_TITLE", comment: ""), message: NSLocalizedString("RATE_ALERT_MESSAGE", comment: ""), preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_ALERT_YES", comment: ""), style: .default, handler: { (action:UIAlertAction) -> Void in
@@ -301,20 +313,24 @@ class InitialScene: SKScene {
             
             alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_ALERT_CANCEL", comment: ""), style: .cancel, handler: nil))
             AppDelegate.gameViewController.present(alert, animated: true, completion: nil)
-        })
+        }
         return bt
     }()
     
     private lazy var soundButton: TWSwitch = {
-        let sw = TWSwitch(normalTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_on_n"),
-                          selectedTexture: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_off_n"))
-        sw.highlightedStateMultiTextureFromNormal = AppCache.instance.interfaceAtlas.textureNamed("bt_sound_on_h")
-        sw.highlightedStateMultiTextureFromSelected = AppCache.instance.interfaceAtlas.textureNamed("bt_sound_off_h")
+        let sw = TWSwitch(
+            normal: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_on_n"),
+            highlighted: (
+                fromNormal: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_on_h"),
+                fromSelected: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_off_h")
+            ),
+            selected: AppCache.instance.interfaceAtlas.textureNamed("bt_sound_off_n")
+        )
         
-        sw.selected = !SKAction.shouldPlaySound()
-        sw.addClosure(.touchUpInside, target: self, closure: { (s, sender) -> () in
-            SKAction.saveNewSoundEffectsSettings(!sender.selected)
-        })
+        sw.state.isSelected = !SKAction.shouldPlaySound()
+        sw.addClosure(.touchUpInside) { sender in
+            SKAction.saveNewSoundEffectsSettings(!sender.state.isSelected)
+        }
         return sw
     }()
     

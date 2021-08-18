@@ -62,10 +62,10 @@ public class SKTMoveEffect: SKTEffect {
   public override func update(_ t: CGFloat) {
     // This allows multiple SKTMoveEffect objects to modify the same node
     // at the same time.
-    let newPosition = startPosition + delta*t
+      let newPosition = startPosition + delta * CGPoint(x: t, y: t)
     let diff = newPosition - previousPosition
     previousPosition = newPosition
-    node.position += diff
+    node.position = node.position + diff
   }
 }
 
@@ -85,7 +85,7 @@ public class SKTScaleEffect: SKTEffect {
   }
 
   public override func update(_ t: CGFloat) {
-    let newScale = startScale + delta*t
+    let newScale = startScale + delta * CGPoint(x: t, y: t)
     let diff = newScale / previousScale
     previousScale = newScale
     node.xScale *= diff.x
@@ -120,7 +120,7 @@ public class SKTRotateEffect: SKTEffect {
  * Wrapper that allows you to use SKTEffect objects as regular SKActions.
  */
 public extension SKAction {
-  public class func actionWithEffect(_ effect: SKTEffect) -> SKAction {
+  class func actionWithEffect(_ effect: SKTEffect) -> SKAction {
     return SKAction.customAction(withDuration: effect.duration) { node, elapsedTime in
       var t = elapsedTime / CGFloat(effect.duration)
 

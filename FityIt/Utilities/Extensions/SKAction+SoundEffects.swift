@@ -29,7 +29,8 @@ extension SKAction {
     class func reloadSoundEffectsSettings(_ newValue: Bool? = nil) -> Bool {
         let newBool = newValue ?? !(UserDefaults.standard.bool(forKey: soundEffectsString))
         userWantEffects = newBool
-        TWControl.defaultSoundEffectsEnabled = newBool
+        TWButton.defaultSoundEffectsEnabled = newBool
+        TWSwitch.defaultSoundEffectsEnabled = newBool
         AppCache.instance.resetSounds(initializeAfter: newBool)
         return newBool
     }

@@ -39,20 +39,12 @@ class ScoreContainer: SKSpriteNode {
         leftContainer.addChild(leftTitle)
         rightContainer.addChild(rightTitle)
     
-    
-        leftTitle.maxWidth = leftContainer.size.width
-        rightTitle.maxWidth = rightContainer.size.width
-    
-    
         rightTitle.position.x = rightTitle.frame.size.width * 0.024
         leftTitle.position.y = leftContainer.size.height * (0.5 - 0.1 - 0.07)
         rightTitle.position.y = rightContainer.size.height * (0.5 - 0.1 - 0.07)
     
         let leftSubtitle = createSubtitleLabel(String(score.highScorePoints()), fontSize: 0.7 * leftContainer.size.height)
         let rightSubtitle = createSubtitleLabel(String(score.points), fontSize: 0.7 * rightContainer.size.height)
-    
-        leftSubtitle.maxWidth = leftContainer.size.width * 0.8
-        rightSubtitle.maxWidth = rightContainer.size.width * 1.2
     
         leftSubtitle.position.y = leftContainer.size.height * (0.5 - 0.7 + 0.07)
         rightSubtitle.position.y = rightContainer.size.height * (0.5 - 0.7 + 0.07)
@@ -61,19 +53,17 @@ class ScoreContainer: SKSpriteNode {
         rightContainer.addChild(rightSubtitle)
     }
 
-    func createTitleLabel(_ text: String, fontSize: CGFloat) -> LPRFixedWidthLabelNode {
-        let l = LPRFixedWidthLabelNode(text: text)
+    func createTitleLabel(_ text: String, fontSize: CGFloat) -> SKLabelNode {
+        let l = SKLabelNode(text: text)
         l.fontName = AppDefines.FontName.defaultLight
         l.fontSize = fontSize
         l.horizontalAlignmentMode = .center
         l.verticalAlignmentMode = .center
-        l.truncationMode = .scale
         return l
     }
     
-    func createSubtitleLabel(_ text: String, fontSize: CGFloat) -> LPRFixedWidthLabelNode {
-        let l = LPRFixedWidthLabelNode(text: text)
-        l.truncationMode = .scale
+    func createSubtitleLabel(_ text: String, fontSize: CGFloat) -> SKLabelNode {
+        let l = SKLabelNode(text: text)
         l.fontName = AppDefines.FontName.defaultBold
         l.fontSize = fontSize
         l.horizontalAlignmentMode = .center

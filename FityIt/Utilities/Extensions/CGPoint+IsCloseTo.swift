@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension CGPoint {
     func isClose(to point: CGPoint, with range: CGFloat) -> Bool {

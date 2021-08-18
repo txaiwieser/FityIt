@@ -27,8 +27,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        TWControl.defaultTouchUpSoundFileName = "button_up.wav"
-        TWControl.defaultTouchDownSoundFileName = "button_down.wav"
+        TWButton.defaultSoundEffects[.touchUpInside] = "button_up.wav"
+        TWButton.defaultSoundEffects[.touchDown] = "button_down.wav"
         _ = SKAction.reloadSoundEffectsSettings()
         
         let overlayView = UIImageView(image: UIImage(named: "bg1"))
@@ -56,7 +56,7 @@ class GameViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        GCHelper.shared.authenticateLocalUser()
+        GameCenter.shared.authenticateLocalUser()
     }
 
     override func didReceiveMemoryWarning() {

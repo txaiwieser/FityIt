@@ -13,7 +13,11 @@ class ShareImageScene: SKScene {
     private let displayContent: TWStackNode!
     
     init(size: CGSize, score: Score?) {
-        displayContent = TWStackNode(length: size.width, fillMode: .vertical)
+        displayContent = TWStackNode(
+            fillMode: .vertical,
+            sizingMode: .dynamic(spacing: nil)
+        )
+        displayContent.size.width = size.width
         super.init(size: size)
         backgroundColor = .red
         
@@ -30,12 +34,11 @@ class ShareImageScene: SKScene {
         
         let str = NSLocalizedString("DOWNLOAD_BANNER", comment: "")
         let downl = SKSpriteNode(texture: SKTexture(imageNamed: str))
-
         
-        displayContent.add(node: logo)
-        displayContent.add(node: scoreC)
-        displayContent.add(node: SKSpriteNode(color: .clear, size: CGSize(width: 10, height: 26)))
-        displayContent.add(node: downl)
+        displayContent.add(node: logo, reload: false)
+        displayContent.add(node: scoreC, reload: false)
+        displayContent.add(node: SKSpriteNode(color: .clear, size: CGSize(width: 10, height: 26)), reload: false)
+        displayContent.add(node: downl, reload: false)
         displayContent.reloadStack()
         displayContent.zPosition = 300
         displayContent.position = CGPoint(x: size.width/2, y: size.height/2)

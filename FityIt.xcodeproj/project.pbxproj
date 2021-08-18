@@ -10,7 +10,6 @@
 		3325AF002059DE40008E1174 /* SKAction+AppearDisappear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AEFF2059DE40008E1174 /* SKAction+AppearDisappear.swift */; };
 		3325AF1D205B02E6008E1174 /* ShareImageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF1B205B02E6008E1174 /* ShareImageScene.swift */; };
 		3325AF1F205B0393008E1174 /* UIView+AsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF1E205B0393008E1174 /* UIView+AsImage.swift */; };
-		3325AF23205B078E008E1174 /* LPRFixedWidthLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF21205B078E008E1174 /* LPRFixedWidthLabelNode.m */; };
 		3325AF26205B09C2008E1174 /* GameScoreHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF25205B09C2008E1174 /* GameScoreHUD.swift */; };
 		3325AF28205B0B6B008E1174 /* GameGesturesHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */; };
 		3325AF2B205B0C99008E1174 /* SpinnerPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325AF2A205B0C99008E1174 /* SpinnerPart.swift */; };
@@ -59,7 +58,7 @@
 		33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD99F2059BB7100B6AE8E /* AppDefines.swift */; };
 		33ECD9A32059BF5500B6AE8E /* InitialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A22059BF5400B6AE8E /* InitialScene.swift */; };
 		33ECD9A52059BFCD00B6AE8E /* AppPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A42059BFCD00B6AE8E /* AppPersistence.swift */; };
-		33ECD9A92059C42500B6AE8E /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A82059C42500B6AE8E /* GCHelper.swift */; };
+		33ECD9A92059C42500B6AE8E /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9A82059C42500B6AE8E /* GameCenter.swift */; };
 		33ECD9AB2059C51F00B6AE8E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AA2059C51E00B6AE8E /* GameScene.swift */; };
 		33ECD9AD2059C5E500B6AE8E /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AC2059C5E500B6AE8E /* Score.swift */; };
 		33ECD9B02059C90A00B6AE8E /* UpdateTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */; };
@@ -94,9 +93,6 @@
 		3325AEFF2059DE40008E1174 /* SKAction+AppearDisappear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+AppearDisappear.swift"; sourceTree = "<group>"; };
 		3325AF1B205B02E6008E1174 /* ShareImageScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareImageScene.swift; sourceTree = "<group>"; };
 		3325AF1E205B0393008E1174 /* UIView+AsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AsImage.swift"; sourceTree = "<group>"; };
-		3325AF20205B078C008E1174 /* FityIt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FityIt-Bridging-Header.h"; sourceTree = "<group>"; };
-		3325AF21205B078E008E1174 /* LPRFixedWidthLabelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPRFixedWidthLabelNode.m; sourceTree = "<group>"; };
-		3325AF22205B078E008E1174 /* LPRFixedWidthLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPRFixedWidthLabelNode.h; sourceTree = "<group>"; };
 		3325AF25205B09C2008E1174 /* GameScoreHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScoreHUD.swift; sourceTree = "<group>"; };
 		3325AF27205B0B6B008E1174 /* GameGesturesHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameGesturesHUD.swift; sourceTree = "<group>"; };
 		3325AF2A205B0C99008E1174 /* SpinnerPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerPart.swift; sourceTree = "<group>"; };
@@ -150,7 +146,7 @@
 		33ECD99F2059BB7100B6AE8E /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		33ECD9A22059BF5400B6AE8E /* InitialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScene.swift; sourceTree = "<group>"; };
 		33ECD9A42059BFCD00B6AE8E /* AppPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPersistence.swift; sourceTree = "<group>"; };
-		33ECD9A82059C42500B6AE8E /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
+		33ECD9A82059C42500B6AE8E /* GameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		33ECD9AA2059C51E00B6AE8E /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		33ECD9AC2059C5E500B6AE8E /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTimer.swift; sourceTree = "<group>"; };
@@ -177,15 +173,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3325AF24205B079C008E1174 /* LPRFixedWidthLabelNode */ = {
-			isa = PBXGroup;
-			children = (
-				3325AF22205B078E008E1174 /* LPRFixedWidthLabelNode.h */,
-				3325AF21205B078E008E1174 /* LPRFixedWidthLabelNode.m */,
-			);
-			path = LPRFixedWidthLabelNode;
-			sourceTree = "<group>";
-		};
 		3325AF29205B0C83008E1174 /* Spinner */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +187,6 @@
 			children = (
 				33B8A32E20B2FCC000BDE204 /* SKTTimingFunctions.swift */,
 				33B8A33020B2FCC000BDE204 /* SKAction+SpecialEffects.swift */,
-				33B8A33220B2FCC000BDE204 /* CGPoint+Extensions.swift */,
 				33B8A33320B2FCC000BDE204 /* SKTEffects.swift */,
 			);
 			path = SKTUtils;
@@ -323,6 +309,8 @@
 		33ECD96F205869CB00B6AE8E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */,
+				33ECD9A82059C42500B6AE8E /* GameCenter.swift */,
 				33ECD995205997DC00B6AE8E /* Delay.swift */,
 				33ECD970205869DA00B6AE8E /* Extensions */,
 			);
@@ -333,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				33B8A34420B3027600BDE204 /* Numbers+Random.swift */,
+				33B8A33220B2FCC000BDE204 /* CGPoint+Extensions.swift */,
 				3325AF2F205C0D0F008E1174 /* Double+Relative.swift */,
 				3325AF36205C6CB3008E1174 /* CGPoint+IsCloseTo.swift */,
 				33ECD98E205993B600B6AE8E /* UIBezierPath+Polygons.swift */,
@@ -372,28 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				33B8A32A20B2FCC000BDE204 /* SKTUtils */,
-				3325AF24205B079C008E1174 /* LPRFixedWidthLabelNode */,
-				33ECD9AE2059C90900B6AE8E /* UpdateTimer */,
-				33ECD9A72059C3DC00B6AE8E /* GCHelper */,
-				3325AF20205B078C008E1174 /* FityIt-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		33ECD9A72059C3DC00B6AE8E /* GCHelper */ = {
-			isa = PBXGroup;
-			children = (
-				33ECD9A82059C42500B6AE8E /* GCHelper.swift */,
-			);
-			path = GCHelper;
-			sourceTree = "<group>";
-		};
-		33ECD9AE2059C90900B6AE8E /* UpdateTimer */ = {
-			isa = PBXGroup;
-			children = (
-				33ECD9AF2059C90900B6AE8E /* UpdateTimer.swift */,
-			);
-			path = UpdateTimer;
 			sourceTree = "<group>";
 		};
 		33ECD9B52059D36000B6AE8E /* Others */ = {
@@ -566,10 +535,9 @@
 				33ECD9B72059D36B00B6AE8E /* ScoreContainer.swift in Sources */,
 				3325AF2D205B1407008E1174 /* Spinner.swift in Sources */,
 				33ECD9B02059C90A00B6AE8E /* UpdateTimer.swift in Sources */,
-				3325AF23205B078E008E1174 /* LPRFixedWidthLabelNode.m in Sources */,
 				33B8A33E20B2FCC000BDE204 /* CGPoint+Extensions.swift in Sources */,
 				33ECD996205997DC00B6AE8E /* Delay.swift in Sources */,
-				33ECD9A92059C42500B6AE8E /* GCHelper.swift in Sources */,
+				33ECD9A92059C42500B6AE8E /* GameCenter.swift in Sources */,
 				33ECD9A02059BB7100B6AE8E /* AppDefines.swift in Sources */,
 				3325AF2B205B0C99008E1174 /* SpinnerPart.swift in Sources */,
 				33ECD98F205993B600B6AE8E /* UIBezierPath+Polygons.swift in Sources */,
@@ -777,7 +745,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDW.FityIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FityIt/Supporting Files/FityIt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -801,7 +768,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDW.FityIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FityIt/Supporting Files/FityIt-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -844,8 +810,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/txaiwieser/TWSpriteKitUtils";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

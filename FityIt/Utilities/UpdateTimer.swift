@@ -1,22 +1,6 @@
-//
-//  UpdateTimer.swift
-//  GameObjects
-//
-//  Created by bryn austin bellomy on 2014 Nov 27.
-//  Copyright (c) 2014 bryn austin bellomy. All rights reserved.
-//
-
 import Foundation
 
-
-/**
- A timer object for tracking commonly-needed time variables in the scene loop of a game.  Also includes a lap timer (see `lap()`) that makes it trivial to track
- an arbitrary event (i.e., one that isn't necessarily tied to the `update()` cycle).  During your scene loop's `update()` method, `timeSinceLastLap` will be
- set to the number of seconds since the previous time `lap()` was called (or, if it has never been called, the number of seconds since the first call to
- `update()`).  Call `lap()` any time the event you're monitoring occurs, and `timeSinceLastLap` will reset to 0 and begin counting up again.
- */
-public struct UpdateTimer
-{
+public struct UpdateTimer {
     public init() {}
     
     /** The number of seconds since `update()` was last called. */
@@ -32,7 +16,7 @@ public struct UpdateTimer
     public private(set) var previousUpdateTime = TimeInterval(0)
     
     /** The number of frames rendered since the start of the app. Useful if you need to lock your game's update
-     cycle to the framerate. For example this allows you to perform certain actions n frames from now, instead
+     cycle to the frame rate. For example this allows you to perform certain actions n frames from now, instead
      of n seconds. */
     public private(set) var frameCount : Int = 0
     

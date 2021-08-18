@@ -61,7 +61,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     private var shapeStartPositionY: CGFloat {
-        return size.height / 2 - Shape.defaultSize.height - 8 - (AppDefines.Constants.isiPhoneX ? 30 : 0)
+        return size.height / 2 - Shape.defaultSize.height - 8 - 30
     }
 
     private var shapeEndPositionY: CGFloat {
@@ -209,13 +209,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     private lazy var backToInitial: TWButton = {
-        let bt = TWButton(size: CGSize(width: 50, height: 50), normalColor: .red, highlightedColor: .white)
-        bt.position = CGPoint(x: -self.size.width/2 + bt.size.height/2, y: self.size.height/2 - bt.size.height/2)
+        let btSize = CGSize(width: 50, height: 50)
+        let bt = TWButton(
+            size: btSize,
+            normal: .red,
+            highlighted: .white
+        )
+        bt.position = CGPoint(x: -self.size.width/2 + btSize.height/2, y: self.size.height/2 - btSize.height/2)
         bt.zPosition = 500
-        bt.addClosure(.touchUpInside, target: self, closure: { (currentScene, sender) -> () in
-            let scene = InitialScene(score: nil)
-            currentScene.removeUIandPresentScene(scene)
-        })
+        bt.addClosure(.touchUpInside) { [unowned self] _ in
+            removeUIandPresentScene(InitialScene(score: nil))
+        }
 
         return bt
     }()
@@ -344,11 +348,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     static func calculateSceneSize(_ size: CGSize? = nil) -> CGSize {
         let size = size ?? AppDelegate.gameViewController.gameView.frame.size
-        let defaultHeight: CGFloat = 736 + (AppDefines.Constants.isiPhoneX ? 30 : 0)
+        let defaultHeight: CGFloat = 736
         let const = defaultHeight / size.height
         return CGSize(width: const * size.width, height: defaultHeight)
     }
-
 
     #if SNAPSHOT
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
