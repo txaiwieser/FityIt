@@ -11,7 +11,6 @@
 <p align="center">
 <a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat" alt="Swift"/></a>
 <img src="https://img.shields.io/badge/Platform-iOS%2011.0+-lightgrey.svg" alt="Platform: iOS">
-<br>
 <a href="http://twitter.com/txaiwieser"><img src="https://img.shields.io/badge/Twitter-@txaiwieser-blue.svg?style=flat" alt="Twitter"/></a>
 </p>
 
